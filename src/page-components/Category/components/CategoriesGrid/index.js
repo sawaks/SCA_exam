@@ -1,13 +1,11 @@
 import { Box, Flex } from '@rebass/grid';
 import routes from 'common/named-routes';
 import ShowCard from 'components/Card/ShowCard';
-import Divider from 'components/Divider';
 import { Row } from 'components/Grid';
 import Header from 'components/Typography/Header';
 import Paragraph from 'components/Typography/Paragraph';
 import get from 'lodash/get';
 import Link from 'next/link';
-import FavouriteCategoryButton from 'page-components/Category/components/FavouriteCategoryButton';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
@@ -48,7 +46,7 @@ const TextWrapper = styled.div`
   }
 `;
 
-function CategoriesGrid({ id, slug, shows, name, description, setOrder }) {
+function CategoriesGrid({ shows, name, description, setOrder }) {
   return (
     <StyledCategoryGrid>
       <Flex justifyContent="space-between" alignItems="center" flexWrap="wrap">
@@ -59,18 +57,7 @@ function CategoriesGrid({ id, slug, shows, name, description, setOrder }) {
           </TextWrapper>
           )}
         </StyledBox>
-
-        <Box width={[1, 0.35, 0.35]}>
-          <Flex justifyContent={['center', 'flex-end', 'flex-end']} alignItems="center">
-            <Box width={['100%', 'auto', 'auto']}>
-              <FavouriteCategoryButton id={id} slug={slug} name={name} />
-            </Box>
-          </Flex>
-        </Box>
       </Flex>
-      <Box my={spacing.m}>
-        <Divider />
-      </Box>
       <Box mt={spacing.l} mb={spacing.m}>
         <Flex justifyContent="space-between" alignItems="center" flexWrap="wrap">
           <Header as="h2" text={`${shows.length} Podcasts`} variant="l" />
@@ -106,7 +93,6 @@ function CategoriesGrid({ id, slug, shows, name, description, setOrder }) {
 }
 
 CategoriesGrid.propTypes = {
-  id: PropTypes.string.isRequired,
   shows: PropTypes.arrayOf(PropTypes.shape({
     slug: PropTypes.string,
     name: PropTypes.string,
@@ -118,7 +104,6 @@ CategoriesGrid.propTypes = {
     }),
   })),
   name: PropTypes.string,
-  slug: PropTypes.string,
   description: PropTypes.string,
   setOrder: PropTypes.func,
 };
@@ -126,7 +111,6 @@ CategoriesGrid.propTypes = {
 CategoriesGrid.defaultProps = {
   shows: [],
   name: '',
-  slug: '',
   description: null,
   setOrder: null,
 };

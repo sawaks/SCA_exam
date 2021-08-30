@@ -6,8 +6,6 @@ import styled from 'styled-components';
 import screen from 'styles/helpers/media';
 import Header from 'components/Typography/Header';
 import CreatorImage from 'components/CreatorImage';
-import { Mobile } from 'components/Screen';
-import BackIcon from 'components/BackIcon';
 import DescriptionBlock from 'components/DescriptionBlock';
 import TagBlocks from '../../../../components/TagsBlock';
 
@@ -22,11 +20,6 @@ const StyledContainer = styled(Flex)`
 
 const StationInfoContainer = ({ stationName, logo, stationCategories, description, backgroundColour }) => (
   <StyledContainer flexDirection="column">
-    <Mobile>
-      <Flex justifyContent="space-between" pb={spacing.l}>
-        <BackIcon />
-      </Flex>
-    </Mobile>
     <Flex justifyContent={['center', 'center', 'flex-start']}>
       <CreatorImage imageUrl={logo || ''} backgroundColour={backgroundColour || ''} width={320} height={320} />
     </Flex>
