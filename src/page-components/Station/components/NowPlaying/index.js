@@ -1,6 +1,6 @@
 import React from 'react';
 import { shape, bool, string, func } from 'prop-types';
-import { Box, Flex } from 'reflexbox';
+import { Box, Flex } from '@rebass/grid';
 import styled from 'styled-components';
 import spacing from 'styles/helpers/spacing';
 import screen from 'styles/helpers/media';
