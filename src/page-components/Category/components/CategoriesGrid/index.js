@@ -11,8 +11,6 @@ import React from 'react';
 import styled from 'styled-components';
 import screen from 'styles/helpers/media';
 import spacing from 'styles/helpers/spacing';
-import gtm from 'utilities/GTM/gtmTags';
-import addToDataLayer from 'utilities/helpers/dataLayer';
 
 import FilterButton from '../FilterButton';
 
@@ -76,12 +74,6 @@ function CategoriesGrid({ shows, name, description, setOrder }) {
                   title={show.name}
                   subTitle={show.description}
                   imageUrl={get(show, 'images.squareLarge.url', null)}
-                  onClick={() => addToDataLayer({
-                    event: gtm.onBrowsePageCategoryBasedCarouselClick,
-                    carouselCardIndex: i,
-                    carouselName: name,
-                    carouselCardName: show.name,
-                  })}
                 />
               </a>
             </Link>

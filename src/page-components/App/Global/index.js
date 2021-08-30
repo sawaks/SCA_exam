@@ -1,8 +1,5 @@
-import NoSSR from 'components/NoSSR';
 import React from 'react';
 import GlobalStyles from 'styles/global';
-import EasterEgg from './EasterEgg';
-import Toast from './Toast';
 
 /**
  * @method Global
@@ -17,10 +14,6 @@ export default function Global() {
   return (
     <>
       <GlobalStyles />
-      <Toast />
-      <NoSSR>
-        <EasterEgg />
-      </NoSSR>
     </>
   );
 }

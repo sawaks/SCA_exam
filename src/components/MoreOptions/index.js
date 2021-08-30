@@ -4,8 +4,6 @@ import MoreOptionsIcon from 'components/Icons/more-horizontal.svg';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import gtm from 'utilities/GTM/gtmTags';
-import page from 'utilities/GTM/pageTags';
 import addToDataLayer from 'utilities/helpers/dataLayer';
 import routes from '../../common/named-routes';
 
@@ -40,10 +38,6 @@ function MoreOptions({ text, showText, showSlug, onClick, visible, disable, drop
         disable={disable}
         variant="icon"
         withBorder
-        onClick={() => addToDataLayer({
-          event: (isShowPage && gtm.podcastThreeDots) || (isTrendingEpisodes && gtm.onBrowsePageTrendingEpiosdesThreeDots),
-          pageType: (isShowPage && page.showPage) || (isTrendingEpisodes && page.browsePage),
-        })}
         icon={<MoreOptionsIcon />}
       >
         { !isActive && (

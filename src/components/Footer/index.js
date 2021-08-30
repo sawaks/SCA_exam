@@ -1,7 +1,6 @@
 import namedRoutes from 'common/named-routes';
 import Button from 'components/Button';
 import addToDataLayer from 'utilities/helpers/dataLayer';
-import gtm from 'utilities/GTM/gtmTags';
 import { Flex } from 'components/Grid';
 import Section from 'components/Section';
 import React from 'react';
@@ -82,7 +81,7 @@ function Footer() {
             }}
           />
         </StyledLink>
-        <StyledLink onClick={() => addToDataLayer({ event: gtm.footerFaq })}>
+        <StyledLink>
           <Button
             as="a"
             text="FAQ"

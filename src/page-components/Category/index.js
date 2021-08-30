@@ -8,9 +8,6 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { getCategories } from 'utilities/api/graphql/categories/queryMethods';
-import gtm from 'utilities/GTM/gtmTags';
-import page from 'utilities/GTM/pageTags';
-import addToDataLayer from 'utilities/helpers/dataLayer';
 import styled from 'styled-components';
 import screen from 'styles/helpers/media';
 
@@ -29,13 +26,6 @@ const StyledContainer = styled(Container)`
 function Category({ categoryData }) {
   const [order, setOrder] = useState('');
   const [category, setCategory] = useState(categoryData);
-
-  useEffect(() => {
-    addToDataLayer({
-      event: gtm.onPageLoad,
-      pageType: page.categoryPage,
-    });
-  }, []);
 
   const {
     id,

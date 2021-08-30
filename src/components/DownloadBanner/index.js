@@ -9,8 +9,6 @@ import screen from 'styles/helpers/media';
 import spacing from 'styles/helpers/spacing';
 import { getOS } from 'utilities/helpers/getDeviceInfo';
 import { OS_TYPE } from 'utilities/constants';
-import gtm from 'utilities/GTM/gtmTags';
-import addToDataLayer from 'utilities/helpers/dataLayer';
 
 const GooglePlay = () => (
   <Google>
@@ -86,7 +84,7 @@ const DownloadBanner = () => {
               <GooglePlay />
               <AppleStore />
               {os === OS_TYPE.HUAWEI && (
-                <Box onClick={() => addToDataLayer({ event: gtm.hauweiStoreDownloadHomepageStartListening })}>
+                <Box>
                   <a target="_blank" rel="noreferrer" href={huaweiLink + huaweiReferrer}>
                     <HuaweiIcon />
                   </a>

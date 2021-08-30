@@ -6,15 +6,10 @@ import Paragraph from 'components/Typography/Paragraph';
 import isEqual from 'lodash/isEqual';
 import { bool, string } from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { openLiveStreamPlayer } from 'store/actions/player-overlay';
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import screen from 'styles/helpers/media';
 import spacing from 'styles/helpers/spacing';
-import { LIVE_STREAM_ORIGIN } from 'utilities/constants';
-import gtm from 'utilities/GTM/gtmTags';
-import page from 'utilities/GTM/pageTags';
-import addToDataLayer from 'utilities/helpers/dataLayer';
 
 const StationWrapper = styled(Flex)`
   width: 100%;
@@ -146,7 +141,6 @@ const StationCard = ({
   stationName,
   stationSlug,
 }) => {
-  const dispatch = useDispatch();
   const nowPlayingData = useSelector(state => state.nowPlaying[callSign.toLowerCase()], isEqual);
   const [songTitle, setSongTitle] = useState('');
   const [songArtwork, setSongArtwork] = useState('');
@@ -161,13 +155,6 @@ const StationCard = ({
   }, [nowPlayingData]);
 
   const handleClick = () => {
-    addToDataLayer({
-      event: gtm.myFeedShowPlay,
-      pageType: page.myFeedPage,
-      stationName,
-    });
-
-    dispatch(openLiveStreamPlayer(stationSlug, LIVE_STREAM_ORIGIN.myFeed));
   };
 
   return (

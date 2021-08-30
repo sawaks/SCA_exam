@@ -3,8 +3,6 @@ import * as trailerController from 'components/Trailer/player/trailerController'
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { shallowEqual, useSelector } from 'react-redux';
-import gtm from 'utilities/GTM/gtmTags';
-import page from 'utilities/GTM/pageTags';
 import addToDataLayer from 'utilities/helpers/dataLayer';
 
 import PlayPreviewUI from './PlayPreviewUI';

@@ -3,8 +3,6 @@ import { Box } from 'components/Grid';
 import Link from 'next/link';
 import routes from 'common/named-routes';
 import Slider from 'components/Slider';
-import addToDataLayer from 'utilities/helpers/dataLayer';
-import gtm from 'utilities/GTM/gtmTags';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import CategoryCard from 'components/Card/CategoryCard';
@@ -24,12 +22,6 @@ const PodcastCategories = ({ podcastCategories }) => (
               bg={get(category, 'colour', '')}
               heading={get(category, 'name', '')}
               image={get(category, 'images.bannerSmall.url', '')}
-              onClick={() => addToDataLayer({
-                event: gtm.onBrowsePageCategoryTitle,
-                carouselCardIndex: i,
-                carouselName: 'Podcast Categories',
-                carouselCardName: category.name,
-              })}
             />
           </a>
         </Link>
