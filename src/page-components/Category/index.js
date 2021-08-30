@@ -12,7 +12,7 @@ import styled from 'styled-components';
 import screen from 'styles/helpers/media';
 
 import { LISTNR_META } from 'utilities/constants';
-import nameRoutes from 'common/named-routes';
+import routes from 'common/routes';
 import CategoriesContainer from './components/CategoryContainer';
 
 const StyledContainer = styled(Container)`
@@ -50,7 +50,7 @@ function Category({ categoryData }) {
   const backgroundImage = images?.squareLarge?.url;
 
   if (isEmpty(category) || !category) {
-    useRouterServer(nameRoutes.external.error404);
+    useRouterServer(routes.error404);
     return null;
   }
 

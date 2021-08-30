@@ -1,5 +1,5 @@
 import { Box, Flex } from '@rebass/grid';
-import routes from 'common/named-routes';
+import routes from 'common/routes';
 import ShowCard from 'components/Card/ShowCard';
 import { Row } from 'components/Grid';
 import Header from 'components/Typography/Header';
@@ -66,7 +66,7 @@ function CategoriesGrid({ shows, name, description, setOrder }) {
         {shows.map((show, i) => (
           <Box width={[1 / 2, 1 / 3, 1 / 4, 1 / 5]} mb={spacing.l} key={show.slug}>
             <Link
-              href={`${routes.external.podcasts}/${show.slug}`}
+              href={`${routes.podcasts}/${show.slug}`}
             >
               <a>
                 <ShowCard

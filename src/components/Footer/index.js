@@ -1,4 +1,3 @@
-import namedRoutes from 'common/named-routes';
 import Button from 'components/Button';
 import { Flex } from 'components/Grid';
 import Section from 'components/Section';
@@ -75,7 +74,7 @@ function Footer() {
             text="Contact"
             variant="quaternary"
             link={{
-              href: namedRoutes.external.contactUs,
+              href: 'https://www.southerncrossaustereo.com.au/listnr',
               passHref: true,
             }}
           />
@@ -86,7 +85,7 @@ function Footer() {
             text="FAQ"
             variant="quaternary"
             link={{
-              href: namedRoutes.external.faq,
+              href: 'https://www.southerncrossaustereo.com.au/listnr',
               passHref: true,
             }}
           />

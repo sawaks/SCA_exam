@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { string, shape } from 'prop-types';
 import get from 'lodash/get';
 import { Flex } from 'components/Grid';
-import routes from 'common/named-routes';
+import routes from 'common/routes';
 import styled from 'styled-components';
 import screen from 'styles/helpers/media';
 import Header from 'components/Typography/Header';
@@ -80,7 +80,7 @@ function PreviewCard({ episode, ...props }) {
             { playing ? <StopIcon /> : <PlayIcon /> }
           </PlayIconWrapper>
         </StyledCardWrapper>
-        <Link href={`${routes.external.podcasts}/${show.slug}`} passHref>
+        <Link href={`${routes.podcasts}/${show.slug}`} passHref>
           <a>
             <HeaderWrapper>
               <Header as="h3" variant="s" linesToShow={1} mt="m" text={show.name} />

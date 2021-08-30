@@ -5,7 +5,7 @@ import Section from 'components/Section';
 import { shape, string } from 'prop-types';
 import React from 'react';
 import spacing from 'styles/helpers/spacing';
-import nameRoutes from 'common/named-routes';
+import routes from 'common/routes';
 import useRouterServer from 'utilities/helpers/useRouterServer';
 import NowPlaying from './components/NowPlaying';
 import StationInfoContainer from './components/StationInfoContainer';
@@ -16,7 +16,7 @@ const Station = ({ station }) => {
   const stationCategories = genres?.map(genre => genre.slug.replace(/-/g, ''));
 
   if (!station) {
-    useRouterServer(nameRoutes.external.error404);
+    useRouterServer(routes.error404);
     return null;
   }
   const currentTrack = {

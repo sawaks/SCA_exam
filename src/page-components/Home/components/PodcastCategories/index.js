@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from 'components/Grid';
 import Link from 'next/link';
-import routes from 'common/named-routes';
+import routes from 'common/routes';
 import Slider from 'components/Slider';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
@@ -15,7 +15,7 @@ const PodcastCategories = ({ podcastCategories }) => (
     {podcastCategories.map((category, i) => (
       <Box key={category.slug} px="6px">
         <Link
-          href={`${routes.external.category}/${category.slug}`}
+          href={`${routes.category}/${category.slug}`}
         >
           <a>
             <CategoryCard

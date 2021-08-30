@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import screen from 'styles/helpers/media';
-import routes from 'common/named-routes';
+import routes from 'common/routes';
 import ShowCard from 'components/Card/ShowCard';
 import Slider from 'components/Slider';
 import get from 'lodash/get';
@@ -54,7 +54,7 @@ const StationPodcastCarousels = ({ carouselType, title, dataTest, shows = [] }) 
               const imageUrl = get(show.images.squareLarge, 'url', null);
               const backgroundColour = get(show, 'colourDark', null);
               return (
-                <Link href={`${routes.external.podcasts}/${show.slug}`} key={show.slug}>
+                <Link href={`${routes.podcasts}/${show.slug}`} key={show.slug}>
                   <a>
                     <ShowCard
                       title={show?.name}

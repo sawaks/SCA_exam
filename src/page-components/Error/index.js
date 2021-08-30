@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import nameRoutes from 'common/named-routes';
+import routes from 'common/routes';
 import styled from 'styled-components';
 import { Container, Flex, Box } from 'components/Grid';
 import Button from 'components/Button';
@@ -51,7 +51,7 @@ function Error({ statusCode, statusMessage }) {
                   text="Hit the link below and let&apos;s start again."
                 />
                 <Link
-                  href={`${nameRoutes.external.root}`}
+                  href={`${routes.root}`}
                   passHref
                 >
                   <Button

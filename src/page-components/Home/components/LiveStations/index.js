@@ -1,4 +1,4 @@
-import routes from 'common/named-routes';
+import routes from 'common/routes';
 import ShowCard from 'components/Card/ShowCard';
 import Slider from 'components/Slider';
 import Link from 'next/link';
@@ -14,7 +14,7 @@ function LiveStations({ promotedStations }) {
         {promotedStations.map((station) => {
           const imageUrl = station?.images?.logoLarge;
           return (
-            <Link href={`${routes.external.stations}/${station.slug}`} key={station.slug}>
+            <Link href={`${routes.stations}/${station.slug}`} key={station.slug}>
               <a>
                 <ShowCard
                   colour={station?.backgroundColour}
