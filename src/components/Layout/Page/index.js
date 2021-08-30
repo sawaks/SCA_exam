@@ -1,12 +1,9 @@
 import Footer from 'components/Footer';
 import { useRouter } from 'next/router';
-import { Box, Container, Flex } from 'components/Grid';
+import { Box, Container } from 'components/Grid';
 import FixContent from 'components/Layout/FixContentBlock';
 import NavBar from 'components/NavBar';
-import MobileNav from 'components/NavBar/components/MobileNav';
-import CondensedPlayer from 'components/Player/CondensedPlayer';
-import { Desktop } from 'components/Screen';
-import { bool, node, func } from 'prop-types';
+import { bool, func, node } from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { shallowEqual, useSelector } from 'react-redux';
 import styled from 'styled-components';
@@ -40,14 +37,6 @@ const HeaderBar = styled(Box)`
   ${screen.md} {
     z-index: 13;
   }
-`;
-
-const FooterBar = styled(Flex)`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: ${zIndex.headerBar};
 `;
 
 const fullWidthContainer = ({ fullWidthBg = null, fullWidthContent = null, children, ...props }) => {
@@ -117,32 +106,11 @@ function Page({ children, withAudio, withNav, withNavDesktopOnly, withFooter, fu
   return (
     <FixContent playerOverlayVisible={playerOverlayVisible}>
       <StyledPage withAudio={withAudio}>
-        {withNav && !withNavDesktopOnly && !isAppLink
-        && (
-          <HeaderBar flex="0 1 auto" mb={[spacing.l, spacing.none, spacing.l]}>
-            <NavBar />
-          </HeaderBar>
-        )}
+        <HeaderBar flex="0 1 auto" mb={[spacing.l, spacing.none, spacing.l]}>
+          <NavBar />
+        </HeaderBar>
 
-        {withNavDesktopOnly
-        && (
-          <Desktop>
-            <HeaderBar flex="0 1 auto">
-              <NavBar />
-            </HeaderBar>
-          </Desktop>
-        )}
-
-        {withAudio && fullWidthContainer({ fullWidthBg, fullWidthContent, children, ...props })}
-
-        {withAudio && (
-          <>
-            <FooterBar flexDirection="column">
-              <CondensedPlayer />
-              { withNav && !isAppLink && <MobileNav />}
-            </FooterBar>
-          </>
-        )}
+        {fullWidthContainer({ fullWidthBg, fullWidthContent, children, ...props })}
 
         {withFooter && !isAppLink && (
           <Container>

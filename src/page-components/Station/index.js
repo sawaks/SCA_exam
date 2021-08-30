@@ -167,13 +167,6 @@ const Station = ({ station, downloadAppBanner }) => {
           </Flex>
         </Section>
       </Container>
-      <FullWidthSection fullWidth>
-        <AppBanner
-          title={downloadAppBanner.title}
-          description={downloadAppBanner.description}
-          backgroundImageUrl={downloadAppBanner.backgroundImageUrl}
-        />
-      </FullWidthSection>
     </Page>
   );
 };

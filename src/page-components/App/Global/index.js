@@ -1,15 +1,11 @@
 import NoSSR from 'components/NoSSR';
-import AudioPlayerEventsHandler from 'components/Player/AudioPlayer/AudioPlayerEventsHandler';
-import LiveStreamEventsHandler from 'components/Player/LiveStreamPlayer/LiveStreamEventsHandler';
 import PlayerOverlay from 'components/Player/PlayerOverlay';
-import TrailerPlayerEvents from 'components/Trailer/player/trailerEvents';
 import React from 'react';
 import GlobalStyles from 'styles/global';
 import AnalyticsEventsHandler from './AnalyticsEventsHandler';
 import EasterEgg from './EasterEgg';
 import NowPlaying from './NowPlaying';
 import Firebase from './Firebase';
-import Modals from './Modals';
 import Toast from './Toast';
 
 /**
@@ -28,13 +24,9 @@ export default function Global() {
       <Toast />
       <PlayerOverlay />
       <NowPlaying />
-      <AudioPlayerEventsHandler />
-      <LiveStreamEventsHandler />
-      <TrailerPlayerEvents />
       <NoSSR>
         <EasterEgg />
         <Firebase />
-        <Modals />
         <AnalyticsEventsHandler />
       </NoSSR>
     </>
