@@ -1,15 +1,16 @@
 import Footer from 'components/Footer';
-import { useRouter } from 'next/router';
 import { Box, Container } from 'components/Grid';
 import FixContent from 'components/Layout/FixContentBlock';
 import NavBar from 'components/NavBar';
-import { bool, func, node } from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import { bool, string, node } from 'prop-types';
+import React from 'react';
 import { shallowEqual, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import screen from 'styles/helpers/media';
 import zIndex from 'styles/helpers/zIndex';
 import spacing from 'styles/helpers/spacing';
+import { Flex } from '@rebass/grid';
+import addNavbarHeight from '../../../styles/helpers/add-navbar-height';
 
 const StyledBg = styled(Box)`
    position: relative;
@@ -26,7 +27,7 @@ const StyledBg = styled(Box)`
 
 const StyledPage = styled.div`
   color: ${props => props.theme.light};
-  padding-bottom: ${props => (props.withAudio ? '80px' : '0px')};
+  padding-bottom: 0;
 `;
 
 const HeaderBar = styled(Box)`
@@ -39,80 +40,62 @@ const HeaderBar = styled(Box)`
   }
 `;
 
-const fullWidthContainer = ({ fullWidthBg = null, fullWidthContent = null, children, ...props }) => {
-  if (fullWidthBg) {
-    return (
-      <StyledBg>
-        {fullWidthBg({ children, ...props })}
-      </StyledBg>
-    );
+const StyledWrapper = styled(Box)`
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+`;
+
+const StyledChildren = styled(Box)`
+  position: relative;
+  ${screen.sm} {
+    padding-top: 120px;
   }
+  ${addNavbarHeight('padding-top', [20, 0, 46])};
+`;
 
-  if (fullWidthContent) {
-    return (
-      <>
-        <StyledBg>
-          { fullWidthContent }
-        </StyledBg>
-        {children}
-      </>
-    );
-  }
+const StyledBackground = styled(Flex)`
+   position: absolute;
+   background: ${props => (props.backgroundImageUrl ? `url(${props.backgroundImageUrl})` : props.backgroundColor)} no-repeat center;
+   background-size: cover;
+   width: 102%;
+   filter: blur(3px);
+   ${addNavbarHeight('height', [290, 390, 593])};
+`;
 
-  return (
-    <div>
-      { children }
-    </div>
-  );
-};
-
-fullWidthContainer.propTypes = {
-  fullWidthBg: func,
-  fullWidthContent: node,
-  children: node,
-};
-
-fullWidthContainer.defaultProps = {
-  fullWidthBg: null,
-  fullWidthContent: null,
-  children: null,
-};
+const StyledBackgroundGradient = styled(Box)`
+   position: absolute;
+   width: inherit;
+   height: inherit;
+   background: ${props => props.theme.backgroundGradient};
+`;
 
 /**
  * Page
  * @description A helper function to add components to a page based on the page requirements.
  */
-function Page({ children, withAudio, withNav, withNavDesktopOnly, withFooter, fullWidthBg, fullWidthContent, ...props }) {
-  const router = useRouter();
-  const [isAppLink, setIsAppLink] = useState(false);
+function Page({ children, withFooter, backgroundColor, backgroundImageUrl }) {
   const playerOverlayVisible = useSelector(state => state.playerOverlay.visible, shallowEqual);
-
-  const checkAsPath = (queryValue) => {
-    if (queryValue && queryValue[1] === 'appLink') {
-      setIsAppLink(true);
-    }
-  };
-
-  useEffect(() => {
-    if (router?.query?.source === 'appLink') {
-      setIsAppLink(true);
-    } else {
-      const queryKey = 'source';
-      const queryValue = router.query[queryKey] || router.asPath.match(new RegExp(`[&?]${queryKey}=(.*)(&|$)`));
-      checkAsPath(queryValue);
-    }
-  }, []);
 
   return (
     <FixContent playerOverlayVisible={playerOverlayVisible}>
-      <StyledPage withAudio={withAudio}>
+      <StyledPage>
         <HeaderBar flex="0 1 auto" mb={[spacing.l, spacing.none, spacing.l]}>
           <NavBar />
         </HeaderBar>
 
-        {fullWidthContainer({ fullWidthBg, fullWidthContent, children, ...props })}
+        <StyledBg>
+          <StyledWrapper>
+            <StyledBackground backgroundColor={backgroundColor} backgroundImageUrl={backgroundImageUrl} alignItems="center" justifyContent="center">
+              <StyledBackgroundGradient />
+            </StyledBackground>
+            <StyledChildren>
+              {children}
+            </StyledChildren>
+          </StyledWrapper>
+        </StyledBg>
 
-        {withFooter && !isAppLink && (
+        {withFooter && (
           <Container>
             <Footer />
           </Container>
@@ -123,22 +106,16 @@ function Page({ children, withAudio, withNav, withNavDesktopOnly, withFooter, fu
 }
 
 Page.propTypes = {
+  backgroundColor: bool,
+  backgroundImageUrl: string,
   children: node.isRequired,
-  withAudio: bool,
-  withNav: bool,
   withFooter: bool,
-  withNavDesktopOnly: bool,
-  fullWidthBg: func,
-  fullWidthContent: node,
 };
 
 Page.defaultProps = {
-  withAudio: false,
-  withNav: false,
-  withNavDesktopOnly: false,
+  backgroundColor: null,
+  backgroundImageUrl: null,
   withFooter: false,
-  fullWidthBg: null,
-  fullWidthContent: null,
 };
 
 export default Page;
