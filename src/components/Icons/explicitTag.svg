@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-402.000000, -304.000000)">
+            <g transform="translate(402.000000, 304.000000)">
+                <rect stroke="#FF5C5C" x="0.5" y="0.5" width="13" height="13" rx="2"></rect>
+                <path d="M9.5,3.5 L4.65625,3.5" stroke="#FD4631" stroke-linecap="square"></path>
+                <path d="M9.5,10.5 L4.65625,10.5" stroke="#FD4631" stroke-linecap="square"></path>
+                <path d="M7.5625,6.5 L4.65625,6.5" stroke="#FD4631" stroke-linecap="square"></path>
+                <path d="M4.65625,3.4375 L4.65625,9.5625" stroke="#FD4631" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

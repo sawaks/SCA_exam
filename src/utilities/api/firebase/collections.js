@@ -1,0 +1,9 @@
+export const USERS_COLLECTION = 'users';
+export const FAVOURITE_CATEGORIES_COLLECTION = 'favouriteCategories';
+export const FAVOURITE_SHOWS_COLLECTION = 'favouriteShows';
+export const FAVOURITE_GENRES_COLLECTION = 'favouriteGenres';
+export const FAVOURITE_STATIONS_COLLECTION = 'favouriteStations';
+export const LISTENED_EPISODES_COLLECTION = 'listenedEpisodes';
+export const FEED_COLLECTION = 'feed';
+export const FCM_DEVICES = 'FCMdevices';
+export const DEVICE_FLOW = 'deviceFlow';

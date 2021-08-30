@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "listnr-web.fullname" . }}
+  labels:
+    app: {{ include "listnr-web.station" . }}
+    chart: {{ include "listnr-web.chartstation" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "listnr-web.station" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "listnr-web.station" . }}
+        release: {{ .Release.Name }}
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - {{ include "listnr-web.station" . }}
+              - key: release
+                operator: In
+                values:
+                - {{ .Release.Name }}
+            topologyKey: "kubernetes.io/hostname"
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: ENABLE_APP_REFERRAL
+              value: "{{ .Values.config.appReferral.enabled }}"
+            - name: ENABLE_MONITORING
+              value: "{{ .Values.config.monitoring.enabled }}"
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: "/api/health"
+              port: http
+            initialDelaySeconds: {{ .Values.app.initialDelaySeconds }}
+            periodSeconds: {{ .Values.app.periodSeconds }}
+            successThreshold: {{ .Values.app.successThreshold }}
+            failureThreshold: {{ .Values.app.failureThreshold }}
+            timeoutSeconds: {{ .Values.app.timeoutSeconds }}
+          readinessProbe:
+            httpGet:
+              path: "/api/health"
+              port: http
+            initialDelaySeconds: {{ .Values.app.initialDelaySeconds }}
+            periodSeconds: {{ .Values.app.periodSeconds }}
+            successThreshold: {{ .Values.app.successThreshold }}
+            failureThreshold: {{ .Values.app.failureThreshold }}
+            timeoutSeconds: {{ .Values.app.timeoutSeconds }}
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}

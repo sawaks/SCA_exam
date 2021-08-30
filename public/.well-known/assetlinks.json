@@ -1,0 +1,38 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "au.com.podcastoneaustralia",
+      "sha256_cert_fingerprints": [
+        "4F:9E:7C:7B:CC:6E:20:71:AC:20:16:6F:20:C9:F0:59:C1:CC:B7:EA:44:21:3D:7A:3C:54:AD:29:EF:48:DD:04"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "au.com.podcastoneaustralia.dev",
+      "sha256_cert_fingerprints": [
+        "6A:E9:B3:72:42:0B:A8:B0:1A:E7:55:13:A2:67:01:11:27:6D:98:ED:82:50:EC:42:01:6B:2E:E0:87:35:E6:35"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "au.com.podcastoneaustralia.beta",
+      "sha256_cert_fingerprints": [
+        "6A:E9:B3:72:42:0B:A8:B0:1A:E7:55:13:A2:67:01:11:27:6D:98:ED:82:50:EC:42:01:6B:2E:E0:87:35:E6:35"
+      ]
+    }
+  }
+]

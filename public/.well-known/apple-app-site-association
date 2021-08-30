@@ -1,0 +1,35 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "9Z66D3CEY4.au.com.podcastoneaustralia",
+        "paths": [
+          "/podcasts/*",
+          "/stations/*"
+        ]
+      },
+      {
+        "appID": "9Z66D3CEY4.au.com.podcastoneaustralia.dev",
+        "paths": [
+          "/podcasts/*",
+          "/stations/*"
+        ]
+      },
+      {
+        "appID": "9Z66D3CEY4.au.com.podcastoneaustralia.beta",
+        "paths": [
+          "/podcasts/*",
+          "/stations/*"
+        ]
+      },
+      {
+        "appID": "au.com.podcastoneaustralia.beta",
+        "paths": [
+          "/podcasts/*",
+          "/stations/*"
+        ]
+      }
+    ]
+  }
+}
