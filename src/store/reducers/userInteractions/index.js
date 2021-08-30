@@ -19,7 +19,6 @@ import {
   LOGIN_REDIRECT_URL, LOGIN_DEVICE_TYPE,
 } from 'store/actions/userInteractions';
 
-import { AUDIO_UPDATE_SOURCE } from 'store/actions/audio-player';
 import { ACTIVATE_DEVICE_TYPE } from 'utilities/constants';
 
 const initialState = {
@@ -133,12 +132,6 @@ export default function userInteractions(state = initialState, action) {
       return {
         ...state,
         playerOverlayAScrolled: true,
-      };
-    case AUDIO_UPDATE_SOURCE:
-      return {
-        ...state,
-        refreshEpisodeList: true,
-        playerOverlayAScrolled: false,
       };
     case REFERRER_PAGE:
       return {

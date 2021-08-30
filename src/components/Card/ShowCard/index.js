@@ -1,5 +1,4 @@
 
-import Notification from 'components/Notification';
 import Header from 'components/Typography/Header';
 import Paragraph from 'components/Typography/Paragraph';
 import PropTypes from 'prop-types';
@@ -16,7 +15,6 @@ export default function ShowCard({ imageUrl, title, subTitle, as, href, count, c
       <StyledCard {...rest} noMaxWidth={noMaxWidth} colour={colour}>
         <>
           {imageUrl && <Image src={imageUrl} alt={title} />}
-          {count > 1 && count !== null && <Notification count={count > countShowLimit ? `${countShowLimit}+` : count} />}
         </>
       </StyledCard>
       <HeaderWrapper noMaxWidth={noMaxWidth}>

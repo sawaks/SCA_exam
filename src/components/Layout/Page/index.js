@@ -1,10 +1,8 @@
 import Footer from 'components/Footer';
 import { Box, Container } from 'components/Grid';
-import FixContent from 'components/Layout/FixContentBlock';
 import NavBar from 'components/NavBar';
 import { bool, string, node } from 'prop-types';
 import React from 'react';
-import { shallowEqual, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import screen from 'styles/helpers/media';
 import zIndex from 'styles/helpers/zIndex';
@@ -75,32 +73,28 @@ const StyledBackgroundGradient = styled(Box)`
  * @description A helper function to add components to a page based on the page requirements.
  */
 function Page({ children, withFooter, backgroundColor, backgroundImageUrl }) {
-  const playerOverlayVisible = useSelector(state => state.playerOverlay.visible, shallowEqual);
-
   return (
-    <FixContent playerOverlayVisible={playerOverlayVisible}>
-      <StyledPage>
-        <HeaderBar flex="0 1 auto" mb={[spacing.l, spacing.none, spacing.l]}>
-          <NavBar />
-        </HeaderBar>
-        <StyledBg>
-          <StyledWrapper>
-            <StyledBackground backgroundColor={backgroundColor} backgroundImageUrl={backgroundImageUrl} alignItems="center" justifyContent="center">
-              <StyledBackgroundGradient />
-            </StyledBackground>
-            <StyledChildren>
-              {children}
-            </StyledChildren>
-          </StyledWrapper>
-        </StyledBg>
+    <StyledPage>
+      <HeaderBar flex="0 1 auto" mb={[spacing.l, spacing.none, spacing.l]}>
+        <NavBar />
+      </HeaderBar>
+      <StyledBg>
+        <StyledWrapper>
+          <StyledBackground backgroundColor={backgroundColor} backgroundImageUrl={backgroundImageUrl} alignItems="center" justifyContent="center">
+            <StyledBackgroundGradient />
+          </StyledBackground>
+          <StyledChildren>
+            {children}
+          </StyledChildren>
+        </StyledWrapper>
+      </StyledBg>
 
-        {withFooter && (
-          <Container>
-            <Footer />
-          </Container>
-        )}
-      </StyledPage>
-    </FixContent>
+      {withFooter && (
+      <Container>
+        <Footer />
+      </Container>
+      )}
+    </StyledPage>
   );
 }
 
