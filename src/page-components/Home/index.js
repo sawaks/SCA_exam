@@ -22,13 +22,15 @@ const Home = ({ promotedCategories, promotedStations, downloadAppBanner }) => (
       { promotedCategories && <PodcastCategories podcastCategories={promotedCategories} /> }
       { promotedStations && <LiveStations promotedStations={promotedStations} /> }
     </Container>
-    <FullWidthSection fullWidth>
-      <AppBanner
-        title={downloadAppBanner?.title}
-        description={downloadAppBanner?.description}
-        backgroundImageUrl={downloadAppBanner?.backgroundImageUrl}
-      />
-    </FullWidthSection>
+    {downloadAppBanner && (
+      <FullWidthSection fullWidth>
+        <AppBanner
+          title={downloadAppBanner?.title}
+          description={downloadAppBanner?.description}
+          backgroundImageUrl={downloadAppBanner?.backgroundImageUrl}
+        />
+      </FullWidthSection>
+    )}
   </Page>
 );
 
@@ -37,9 +39,14 @@ Home.propTypes = {
     backgroundImageUrl: string.isRequired,
     title: string.isRequired,
     description: string.isRequired,
-  }).isRequired,
-  promotedCategories: arrayOf(any).isRequired,
-  promotedStations: arrayOf(object).isRequired,
+  }),
+  promotedCategories: arrayOf(any),
+  promotedStations: arrayOf(object),
 };
 
+Home.defaultProps = {
+  downloadAppBanner: null,
+  promotedCategories: null,
+  promotedStations: null,
+};
 export default Home;

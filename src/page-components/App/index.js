@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
 import Head from 'next/head';
-import { objectOf, shape, func } from 'prop-types';
+import { func, objectOf, shape } from 'prop-types';
 import makeStore from 'store';
 import BackgroundGradient from 'components/Layout/BackgroundGradient';
 import theme from 'styles/theme';
@@ -20,18 +20,6 @@ const store = makeStore();
 
 const App = ({ Component, pageProps }) => {
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'development' && 'serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then((registration) => {
-          // eslint-disable-next-line no-console
-          console.log('Registration successful, scope is:', registration.scope);
-        })
-        .catch((error) => {
-          // eslint-disable-next-line no-console
-          console.log('Service worker registration failed, error:', error);
-        });
-    }
-    // expose store when run in Cypress
     if (window.Cypress) {
       window.store = store;
     }

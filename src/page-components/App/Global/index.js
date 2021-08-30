@@ -1,11 +1,7 @@
 import NoSSR from 'components/NoSSR';
-import PlayerOverlay from 'components/Player/PlayerOverlay';
 import React from 'react';
 import GlobalStyles from 'styles/global';
-import AnalyticsEventsHandler from './AnalyticsEventsHandler';
 import EasterEgg from './EasterEgg';
-import NowPlaying from './NowPlaying';
-import Firebase from './Firebase';
 import Toast from './Toast';
 
 /**
@@ -22,12 +18,8 @@ export default function Global() {
     <>
       <GlobalStyles />
       <Toast />
-      <PlayerOverlay />
-      <NowPlaying />
       <NoSSR>
         <EasterEgg />
-        <Firebase />
-        <AnalyticsEventsHandler />
       </NoSSR>
     </>
   );

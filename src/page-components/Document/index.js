@@ -1,9 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
-import Adswizz from './components/Adswizz';
-import GTM from './components/GTM';
-import KruxTag from './components/KruxTag';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -53,12 +50,9 @@ class MyDocument extends Document {
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           <meta name="msapplication-TileColor" content="#2d89ef" />
           <meta name="theme-color" content="#020024" />
-          <GTM />
-          <KruxTag />
         </Head>
         <body>
           {/* Adswizz scripts placed here as recommended in the developer's guide */}
-          <Adswizz />
           <Main />
           <NextScript />
         </body>

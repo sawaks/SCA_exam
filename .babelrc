@@ -46,9 +46,7 @@
           "babel-plugin-styled-components",
           {
             "ssr": true,
-            "displayName": true,
-            "fileName": true,
-            "preprocess": true
+            "displayName": true
           }
         ]
       ]
