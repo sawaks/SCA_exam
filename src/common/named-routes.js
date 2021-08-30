@@ -60,23 +60,9 @@ const internal = {
   error404: '/404',
 };
 
-const sitemapRootRoutes = {
-  browse: '/browse',
-  contactUs: '/contact-us',
-  faq: '/faq',
-  library: '/library',
-  locations: '/location-details',
-  myFeed: '/my-feed',
-  profile: '/profile',
-  root: '/',
-  search: '/search',
-  submitIdea: '/submit-idea',
-};
-
 module.exports = {
   external,
   internal,
-  sitemapRootRoutes,
   staticRoutes,
 };
 

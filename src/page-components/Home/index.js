@@ -6,17 +6,15 @@ import Page from 'components/Layout/Page';
 import Head from 'next/head';
 import { any, arrayOf, object, shape, string } from 'prop-types';
 import React from 'react';
-import { LISTNR_META } from 'utilities/constants';
 import LiveStations from './components/LiveStations';
 import PodcastCategories from './components/PodcastCategories';
 
 const Home = ({ promotedCategories, promotedStations, downloadAppBanner }) => (
   <Page withNav withFooter>
     <Head>
-      <title>{LISTNR_META.pages.browse.title}</title>
-      <meta name="title" content={LISTNR_META.pages.browse.title} />
-      <meta name="description" content={LISTNR_META.pages.browse.description} />
-      <link rel="canonical" href="/" />
+      <title>Browse Podcasts | LiSTNR</title>
+      <meta name="title" content="Browse Podcasts | LiSTNR" />
+      <meta name="description" content="Browse the best LiSTNR has to offer including Previews and Top Episodes" />
     </Head>
     <Container>
       { promotedCategories && <PodcastCategories podcastCategories={promotedCategories} /> }

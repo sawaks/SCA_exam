@@ -2,20 +2,12 @@ import React, { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
 import Head from 'next/head';
-import { func, objectOf, shape } from 'prop-types';
+import { any, func, objectOf } from 'prop-types';
 import makeStore from 'store';
 import BackgroundGradient from 'components/Layout/BackgroundGradient';
 import theme from 'styles/theme';
-// eslint-disable-next-line import/no-extraneous-dependencies
-// import whyDidYouRender from '@welldone-software/why-did-you-render';
 import Global from './Global';
 
-// if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-//   whyDidYouRender(React, {
-//     trackAllPureComponents: true,
-//     // include: [/SeekBar/],
-//   });
-// }
 const store = makeStore();
 
 const App = ({ Component, pageProps }) => {
@@ -23,10 +15,6 @@ const App = ({ Component, pageProps }) => {
     if (window.Cypress) {
       window.store = store;
     }
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    // Then we set the value in the --vh custom property to the root of the document
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
   }, []);
   return (
     <ThemeProvider theme={theme}>
@@ -44,7 +32,8 @@ const App = ({ Component, pageProps }) => {
 
 App.propTypes = {
   Component: func.isRequired,
-  pageProps: objectOf(shape).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  pageProps: objectOf(any).isRequired,
 };
 
 export default App;
