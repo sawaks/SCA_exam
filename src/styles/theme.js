@@ -1,5 +1,4 @@
 export default {
-  // storybook
   name: 'LiSTNR (Web)',
   // Base colors
   // These should match the "Colour use" section of the Design System

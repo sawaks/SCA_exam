@@ -21,7 +21,7 @@ const StyledErrorCode = styled.h1`
 `;
 
 const StyledText = styled(Flex)`
-  color: rgba(${props => props.theme.LEGACY_secondary}, 0.7);
+  color: rgba(${props => props.theme.secondaryText}, 0.7);
 `;
 
 const Content = styled(Flex)`

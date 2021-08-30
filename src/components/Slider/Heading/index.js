@@ -35,12 +35,12 @@ const StyledLink = styled.a`
   border: 0;
   margin: 0;
   background: transparent;
-  color: ${props => props.theme.LEGACY_secondary};
+  color: ${props => props.theme.secondaryText};
   display: flex;
   align-items: center;
 
   &:visited {
-    color: ${props => props.theme.LEGACY_secondary};
+    color: ${props => props.theme.secondaryText};
   }
 `;
 

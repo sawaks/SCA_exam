@@ -12,8 +12,8 @@ import PodcastCategories from './components/PodcastCategories';
 const Home = ({ promotedCategories, promotedStations, downloadAppBanner }) => (
   <Page withNav withFooter>
     <Head>
-      <title>Browse Podcasts | LiSTNR</title>
-      <meta name="title" content="Browse Podcasts | LiSTNR" />
+      <title>LiSTNR</title>
+      <meta name="title" content="LiSTNR" />
       <meta name="description" content="Browse the best LiSTNR has to offer including Previews and Top Episodes" />
     </Head>
     <Container>
