@@ -19,8 +19,6 @@ import {
   LOGIN_REDIRECT_URL, LOGIN_DEVICE_TYPE,
 } from 'store/actions/userInteractions';
 
-import { ACTIVATE_DEVICE_TYPE } from 'utilities/constants';
-
 const initialState = {
   displaySignUpModal: false,
   displayCollectionModal: false,
@@ -35,7 +33,6 @@ const initialState = {
   playerOverlayAScrolled: false,
   referrerPage: '',
   redirectUrl: null,
-  deviceType: ACTIVATE_DEVICE_TYPE.web,
 };
 
 export default function userInteractions(state = initialState, action) {
