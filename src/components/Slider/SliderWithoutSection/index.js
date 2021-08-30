@@ -4,7 +4,6 @@ import ReactSlick from 'react-slick';
 import styled from 'styled-components';
 import screen from 'styles/helpers/media';
 import spacing from 'styles/helpers/spacing';
-import addToDataLayer from 'utilities/helpers/dataLayer';
 import Divider from 'components/Divider';
 
 import { NextButton, PrevButton } from '../Buttons';
@@ -46,18 +45,8 @@ const lBreakPoint = (cardSize) => {
   }
 };
 
-const handleChange = (current, children, gtmBrowseEvent, gtmViewAllEvent) => {
-  const endOfCarousel = current + 1 >= children.length;
-  if (gtmBrowseEvent || gtmViewAllEvent) {
-    if (gtmViewAllEvent && endOfCarousel) {
-      addToDataLayer({ event: gtmViewAllEvent });
-    } else if (gtmBrowseEvent) {
-      addToDataLayer({ event: gtmBrowseEvent });
-    }
-  }
-};
 
-function SliderWithoutSection({ children, title, cardSize, viewAll, viewAllGtm, noDivider, gtmBrowseEvent, gtmViewAllEvent, showArrows }) {
+function SliderWithoutSection({ children, title, cardSize, viewAll, viewAllGtm, noDivider, gtmBrowseEvent, showArrows }) {
   const settings = {
     dots: false,
     infinite: false,
@@ -77,7 +66,6 @@ function SliderWithoutSection({ children, title, cardSize, viewAll, viewAllGtm, 
         settings: lBreakPoint(cardSize),
       },
     ],
-    afterChange: current => handleChange(current, children, gtmBrowseEvent, gtmViewAllEvent),
     nextArrow: <NextButton gtmBrowseEvent={gtmBrowseEvent} />,
     prevArrow: <PrevButton gtmBrowseEvent={gtmBrowseEvent} />,
     arrows: showArrows,

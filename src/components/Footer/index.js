@@ -1,6 +1,5 @@
 import namedRoutes from 'common/named-routes';
 import Button from 'components/Button';
-import addToDataLayer from 'utilities/helpers/dataLayer';
 import { Flex } from 'components/Grid';
 import Section from 'components/Section';
 import React from 'react';

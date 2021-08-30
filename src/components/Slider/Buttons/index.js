@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import addToDataLayer from 'utilities/helpers/dataLayer';
 import { Flex } from '@rebass/grid';
 import ArrowDown from 'components/Icons/arrow-down.svg';
 import screen from 'styles/helpers/media';
@@ -45,28 +44,18 @@ const TransformedArrow = styled(ArrowDown)`
   transform: rotate(${props => props.rotation}deg) scale(1.4);
 `;
 
-const handleClick = (onClick, direction, event) => {
-  if (event) {
-    addToDataLayer({
-      event,
-      direction,
-    });
-  }
-  onClick();
-};
-
-export function PrevButton({ currentSlide, onClick, gtmBrowseEvent }) {
+export function PrevButton({ currentSlide, onClick }) {
   return (
     <Edge direction="left" visible={currentSlide !== 0}>
-      <Button onClick={() => handleClick(onClick, 'previous', gtmBrowseEvent)}><TransformedArrow rotation={90} /></Button>
+      <Button onClick={onClick}><TransformedArrow rotation={90} /></Button>
     </Edge>
   );
 }
 
-export function NextButton({ onClick, className, gtmBrowseEvent }) {
+export function NextButton({ onClick, className }) {
   return (
     <Edge direction="right" visible={!className.includes('slick-disabled')}>
-      <Button onClick={() => handleClick(onClick, 'next', gtmBrowseEvent)}><TransformedArrow rotation={-90} /></Button>
+      <Button onClick={onClick}><TransformedArrow rotation={-90} /></Button>
     </Edge>
   );
 }
@@ -74,7 +63,6 @@ export function NextButton({ onClick, className, gtmBrowseEvent }) {
 PrevButton.propTypes = {
   onClick: PropTypes.func,
   currentSlide: PropTypes.number,
-  gtmBrowseEvent: PropTypes.string,
 };
 
 PrevButton.defaultProps = {
@@ -86,7 +74,6 @@ PrevButton.defaultProps = {
 NextButton.propTypes = {
   onClick: PropTypes.func,
   className: PropTypes.string,
-  gtmBrowseEvent: PropTypes.string,
 };
 
 NextButton.defaultProps = {
