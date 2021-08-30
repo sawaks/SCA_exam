@@ -1,13 +1,20 @@
 import Home from 'page-components/Home';
-import { getPage } from 'utilities/api/graphql/page/queryMethods';
+import { getPromotedCategories } from '../utilities/api/graphql/categories/queryMethods';
+import { getPromotedStations } from '../utilities/api/graphql/stations/queryMethods';
+import { getPage } from '../utilities/api/graphql/page/queryMethods';
 
 export const getServerSideProps = async () => {
-  const { page } = await getPage('home');
+  const [promotedCategories, promotedStations, { page: { contentBlocks } }] = await Promise.all([
+    getPromotedCategories(),
+    getPromotedStations(),
+    getPage('download-block'),
+  ]);
+
   return {
     props: {
-      title: page.title,
-      meta: page.meta,
-      contentBlocks: page.contentBlocks,
+      promotedCategories: promotedCategories?.promotedCategories,
+      promotedStations: promotedStations?.promotedStations,
+      downloadAppBanner: contentBlocks[0]?.blockData,
     },
   };
 };

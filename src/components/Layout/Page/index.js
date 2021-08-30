@@ -83,7 +83,6 @@ function Page({ children, withFooter, backgroundColor, backgroundImageUrl }) {
         <HeaderBar flex="0 1 auto" mb={[spacing.l, spacing.none, spacing.l]}>
           <NavBar />
         </HeaderBar>
-
         <StyledBg>
           <StyledWrapper>
             <StyledBackground backgroundColor={backgroundColor} backgroundImageUrl={backgroundImageUrl} alignItems="center" justifyContent="center">
@@ -106,7 +105,7 @@ function Page({ children, withFooter, backgroundColor, backgroundImageUrl }) {
 }
 
 Page.propTypes = {
-  backgroundColor: bool,
+  backgroundColor: string,
   backgroundImageUrl: string,
   children: node.isRequired,
   withFooter: bool,

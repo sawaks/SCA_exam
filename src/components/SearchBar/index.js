@@ -1,12 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import get from 'lodash/get';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
-import useDebounce from 'utilities/helpers/useDebounce';
-import { getAutoComplete } from 'utilities/api/graphql/search/queryMethods';
 import screen from 'styles/helpers/media';
-import { useRouter } from 'next/router';
-import nameRoutes from 'common/named-routes';
-import SearchSuggestions from './components/SearchSuggestions';
 import Icon from './assets/search-icon.svg';
 
 const SearchWrapper = styled.div`
@@ -26,7 +20,7 @@ const SearchForm = styled.form`
   height: 40px;
   border-radius: 25px;
   border: solid 1px rgba(255, 255, 255, 0.31);
-  background-color: ${props => (props.focusmode ? props.theme.light : 'rgba(255, 255, 255, 0.13)')};
+  background-color: rgba(255, 255, 255, 0.13);
   padding: 0px 7px 0 10px;
   ${screen.sm} {
     height: 46px;
@@ -37,7 +31,7 @@ const SearchForm = styled.form`
 const Input = styled.input`
   background-color: transparent;
   width: 80%;
-  color: ${props => (props.focusMode ? props.theme.light : props.theme.dark)};
+  color: ${props => props.theme.dark};
   appearance: none;
   border: 0;
   font-size: 16px;
@@ -72,80 +66,19 @@ const SearchLogo = styled(Icon)`
 `;
 
 const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState();
-  const [searchResults, setSearchResults] = useState([]);
-  const [focusMode, setFocusMode] = useState(false);
-  const [suggestionsVisible, setSuggestionsVisible] = useState(false);
   const textInput = useRef(null);
-  const suggestionsBox = useRef(null);
-
-  const router = useRouter();
-
-  const handleChange = (val) => {
-    setSearchTerm(val);
-    setFocusMode(!!val);
-  };
-
-  const handleClick = (e) => {
-    const focus = e.target === textInput.current;
-    setFocusMode(focus || searchTerm);
-    // setTimeout here because we need a very short delay so that the link in SearchSuggestions can fire.
-    // I've stuck with it because it's better than watching Next's router.
-    setTimeout(() => {
-      setSuggestionsVisible(e.target === suggestionsBox.current || focus);
-    }, 200);
-  };
-
-  const debouncedSearchTerm = useDebounce(searchTerm, 500);
-
-  const getSuggestions = async () => {
-    const res = await getAutoComplete(searchTerm);
-    const suggestions = get(res, 'searchSuggestions', []);
-    setSearchResults(suggestions);
-    setSuggestionsVisible(true);
-  };
-
-  useEffect(() => {
-    // Need to handle focus events for input and suggestions
-    document.addEventListener('mousedown', handleClick);
-    if (searchTerm) {
-      getSuggestions();
-    } else {
-      setSearchResults([]);
-    }
-    return () => {
-      document.removeEventListener('mousedown', handleClick);
-    };
-  }, [debouncedSearchTerm]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    router.push({
-      pathname: `${nameRoutes.external.search}`,
-      query: { q: searchTerm },
-    });
-  };
 
   return (
     <SearchWrapper>
-      <SearchForm focusmode={focusMode} onSubmit={handleSubmit}>
+      <SearchForm>
         <Input
           ref={textInput}
           placeholder="Search catalogue"
-          value={searchTerm}
-          onChange={e => handleChange(e.target.value)}
         />
         <SearchButton>
-          <SearchLogo focusMode={focusMode} />
+          <SearchLogo />
         </SearchButton>
       </SearchForm>
-      {searchResults.length > 0 && suggestionsVisible && (
-        <SearchSuggestions
-          ref={suggestionsBox}
-          searchResults={searchResults}
-          searchTerm={searchTerm}
-        />
-      )}
     </SearchWrapper>
   );
 };

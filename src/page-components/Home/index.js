@@ -1,73 +1,45 @@
+/* eslint-disable react/forbid-prop-types */
 import AppBanner from 'components/AppBanner';
+import { Container } from 'components/Grid';
 import FullWidthSection from 'components/Layout/FullWidthSection';
 import Page from 'components/Layout/Page';
-import camelCase from 'lodash/camelCase';
 import Head from 'next/head';
-import { arrayOf, shape, string } from 'prop-types';
-import React, { useEffect } from 'react';
-import gtm from 'utilities/GTM/gtmTags';
-import page from 'utilities/GTM/pageTags';
-import addToDataLayer from 'utilities/helpers/dataLayer';
-import Creator from './components/Creator';
-import FAQ from './components/FAQ';
-import Twocolcontentblock from './components/Twocolcontentblock';
-import PageHero from './components/PageHero';
-import PageHeroNeeds from './components/PageHeroNeeds';
+import { any, arrayOf, object, shape, string } from 'prop-types';
+import React from 'react';
+import { LISTNR_META } from 'utilities/constants';
+import LiveStations from './components/LiveStations';
+import PodcastCategories from './components/PodcastCategories';
 
-const ComponentMap = {
-  twoColCopyLeft: Twocolcontentblock,
-  twoColCopyRight: Twocolcontentblock,
-  faqs: FAQ,
-  twoColCta: AppBanner,
-  squareItemCarousel: Creator,
-  heroOne: PageHero,
-  heroTwo: PageHeroNeeds,
-  default: () => <></>,
-};
-
-const Home = ({ title, meta, contentBlocks = [] }) => {
-  useEffect(() => {
-    addToDataLayer({
-      event: gtm.onPageLoad,
-      pageType: page.homePage,
-    });
-  }, []);
-
-  return (
-    <Page withNav withAudio withFooter>
-      <Head>
-        <title>{title}</title>
-        <meta name="title" content={title} />
-        <meta name="description" content={meta} />
-      </Head>
-      {contentBlocks.map((contentBlock) => {
-        const { blockData } = contentBlock;
-        const componentName = camelCase(blockData.blockTemplate);
-        const Component = ComponentMap[componentName] || ComponentMap.default;
-        return (
-          <FullWidthSection
-            key={blockData.blockTemplate}
-            fullWidth={'faqs' || 'twoColCopyLeft' || 'twoColCopyRight' || 'squareItemCarousel'}
-          >
-            <Component
-              {...blockData}
-              componentName={componentName}
-            />
-          </FullWidthSection>
-        );
-      })}
-    </Page>
-  );
-};
+const Home = ({ promotedCategories, promotedStations, downloadAppBanner }) => (
+  <Page withNav withFooter>
+    <Head>
+      <title>{LISTNR_META.pages.browse.title}</title>
+      <meta name="title" content={LISTNR_META.pages.browse.title} />
+      <meta name="description" content={LISTNR_META.pages.browse.description} />
+      <link rel="canonical" href="/" />
+    </Head>
+    <Container>
+      { promotedCategories && <PodcastCategories podcastCategories={promotedCategories} /> }
+      { promotedStations && <LiveStations promotedStations={promotedStations} /> }
+    </Container>
+    <FullWidthSection fullWidth>
+      <AppBanner
+        title={downloadAppBanner?.title}
+        description={downloadAppBanner?.description}
+        backgroundImageUrl={downloadAppBanner?.backgroundImageUrl}
+      />
+    </FullWidthSection>
+  </Page>
+);
 
 Home.propTypes = {
-  title: string.isRequired,
-  meta: string.isRequired,
-  contentBlocks: arrayOf(shape),
-};
-
-Home.defaultProps = {
-  contentBlocks: [],
+  downloadAppBanner: shape({
+    backgroundImageUrl: string.isRequired,
+    title: string.isRequired,
+    description: string.isRequired,
+  }).isRequired,
+  promotedCategories: arrayOf(any).isRequired,
+  promotedStations: arrayOf(object).isRequired,
 };
 
 export default Home;

@@ -16,7 +16,6 @@ import screen from 'styles/helpers/media';
 
 import { LISTNR_META } from 'utilities/constants';
 import nameRoutes from 'common/named-routes';
-import BackgroundImage from './components/BackgroundImage';
 import CategoriesContainer from './components/CategoryContainer';
 
 const StyledContainer = styled(Container)`
@@ -66,7 +65,7 @@ function Category({ categoryData }) {
   }
 
   return (
-    <Page withNavDesktopOnly withAudio withNav fullWidthBg={BackgroundImage} backgroundImage={backgroundImage} backgroundColor={backgroundColor}>
+    <Page withNav backgroundImage={backgroundImage} backgroundColor={backgroundColor}>
       <StyledContainer>
         <div>
           <Head>

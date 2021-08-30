@@ -1,7 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
-import nameRoutes from 'common/named-routes';
 import Logo from 'components/Icons/listnr-logo.svg';
 import { Desktop, Mobile } from 'components/Screen';
 import spacing from 'styles/helpers/spacing';
@@ -35,14 +33,12 @@ const LogoContainer = styled.a`
 `;
 
 const BarLogo = () => (
-  <Link href={`${nameRoutes.external.root}`}>
-    <LogoContainer title="Listnr logo">
-      <Mobile>
-        <StyledLogo />
-      </Mobile>
-      <Desktop><StyledLogo /></Desktop>
-    </LogoContainer>
-  </Link>
+  <LogoContainer title="Listnr logo">
+    <Mobile>
+      <StyledLogo />
+    </Mobile>
+    <Desktop><StyledLogo /></Desktop>
+  </LogoContainer>
 );
 
 export default BarLogo;
