@@ -5,8 +5,8 @@ import FilterIcon from 'components/Icons/filter-list.svg';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import screen from 'styles/helpers/screen';
-import zIndex from 'styles/helpers/zIndex';
+import screen from 'src/styling/screen';
+import zIndex from 'src/styling/zIndex';
 
 const StyledFilterContainer = styled(Flex)`
   width: 100%;

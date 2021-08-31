@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Flex, Box } from '@rebass/grid';
-import screen from 'styles/helpers/screen';
-import addNavbarHeight from 'styles/helpers/add-navbar-height';
+import screen from 'src/styling/screen';
+import addNavbarHeight from 'src/styling/add-navbar-height';
 
 const StyledWrapper = styled(Box)`
   position: relative;

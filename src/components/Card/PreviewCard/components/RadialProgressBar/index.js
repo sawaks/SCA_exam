@@ -1,6 +1,6 @@
 import React from 'react';
 import { number } from 'prop-types';
-import themes from 'styles/theme';
+import themes from 'src/styling/theme';
 import styled from 'styled-components';
 
 const INITIAL_OFFSET = 27.88;

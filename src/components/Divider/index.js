@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Flex } from 'components/Grid';
-import rgba from 'styles/helpers/rgba';
+import rgba from 'src/styling/rgba';
 
 const StyleDivider = styled(Flex)`
   width: inherit;
@@ -12,7 +12,7 @@ const Hr = styled.hr`
   width: 100%;
   border: 0;
   margin: 0;
-  border-top: ${props => `1px solid ${rgba(props.theme.whiteColor, props.opacity)}`};
+  border-top: ${props => `1px solid ${rgba(props.theme.light, props.opacity)}`};
 `;
 
 const StyleText = styled.div`

@@ -2,7 +2,7 @@ import { Box } from '@rebass/grid';
 import AppStoreIcon from 'components/Icons/app-store.svg';
 import GooglePlayIcon from 'components/Icons/google-play.svg';
 import React, { useEffect, useState } from 'react';
-import spacing from 'styles/helpers/spacing';
+import spacing from 'src/styling/spacing';
 import { OS_TYPE } from 'utilities/constants';
 import { getOS } from 'utilities/helpers/getDeviceInfo';
 

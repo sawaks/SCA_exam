@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Box } from '@rebass/grid';
-import spacing from '../../styles/helpers/spacing';
-import screen from '../../styles/helpers/screen';
+import spacing from '../../styling/spacing';
+import screen from '../../styling/screen';
 
 const StyledImageContainer = styled(Box)`
   flex-shrink: 0;

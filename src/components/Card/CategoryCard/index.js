@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import screen from 'styles/helpers/screen';
+import screen from 'src/styling/screen';
 import { Flex } from 'components/Grid';
 import Header from 'components/Typography/Header';
 import Image from 'components/Image';

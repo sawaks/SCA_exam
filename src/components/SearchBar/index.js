@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import screen from 'styles/helpers/screen';
+import screen from 'src/styling/screen';
 import Icon from './assets/search-icon.svg';
 
 const SearchWrapper = styled.div`

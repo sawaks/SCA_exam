@@ -4,11 +4,11 @@ import NavBar from 'components/NavBar';
 import { bool, string, node } from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import screen from 'styles/helpers/screen';
-import zIndex from 'styles/helpers/zIndex';
-import spacing from 'styles/helpers/spacing';
+import screen from 'src/styling/screen';
+import zIndex from 'src/styling/zIndex';
+import spacing from 'src/styling/spacing';
 import { Flex } from '@rebass/grid';
-import addNavbarHeight from '../../../styles/helpers/add-navbar-height';
+import addNavbarHeight from '../../../styling/add-navbar-height';
 
 const StyledBg = styled(Box)`
    position: relative;

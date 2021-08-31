@@ -1,9 +1,7 @@
 // use em in breakpoints to work properly cross-browser and support users
 // changing their browsers font-size: https://zellwk.com/blog/media-query-units/
 
-import theme from '../theme';
-
-const { breakpoints } = theme;
+const breakpoints = ['40em', '52em', '64em', '76em'];
 
 const screen = {
   mobile: `@media screen and (min-width: ${breakpoints[0]})`,

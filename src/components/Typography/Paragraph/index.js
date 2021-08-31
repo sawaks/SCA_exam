@@ -3,8 +3,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { oneOf, string, node, bool, number, oneOfType } from 'prop-types';
-import screen from 'styles/helpers/screen';
-import spacing from 'styles/helpers/spacing';
+import screen from 'src/styling/screen';
+import spacing from 'src/styling/spacing';
 
 const paragraphStyles = css`
   font-family: ${props => props.theme.bodyFontFamily};

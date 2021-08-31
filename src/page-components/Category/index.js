@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { getCategories } from 'utilities/api/graphql/categories/queryMethods';
 import styled from 'styled-components';
-import screen from 'styles/helpers/screen';
+import screen from 'src/styling/screen';
 
 import { LISTNR_META } from 'utilities/constants';
 import routes from 'common/routes';

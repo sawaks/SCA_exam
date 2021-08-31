@@ -1,4 +1,4 @@
-import screen from 'styles/helpers/screen';
+import screen from 'src/styling/screen';
 import { css } from 'styled-components';
 
 function addNavbarHeight(property, propertyValues) {

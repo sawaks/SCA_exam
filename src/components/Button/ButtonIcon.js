@@ -3,7 +3,7 @@ import CTA from 'components/Typography/CallToAction';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { css } from 'styled-components';
-import screen from 'styles/helpers/screen';
+import screen from 'src/styling/screen';
 
 const ButtonIcon = ({ text, mobileText, icon, highlighted }) => {
   if (text) {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import screen from 'styles/helpers/screen';
+import screen from 'src/styling/screen';
 
 const Mobile = styled.div`
   display: block;

@@ -3,8 +3,8 @@ import { string } from 'prop-types';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import screen from '../../styles/helpers/screen';
-import spacing from '../../styles/helpers/spacing';
+import screen from '../../styling/screen';
+import spacing from '../../styling/spacing';
 
 const StyledBlock = styled.div`
   margin-top: ${spacing.l};

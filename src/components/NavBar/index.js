@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Flex } from 'components/Grid';
 import styled from 'styled-components';
-import screen from 'styles/helpers/screen';
-import spacing from 'styles/helpers/spacing';
+import screen from 'src/styling/screen';
+import spacing from 'src/styling/spacing';
 import SearchBar from 'components/SearchBar';
 import Headroom from 'react-headroom';
 import BarLogo from '../BarLogo';

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import screen from 'styles/helpers/screen';
-import spacing from 'styles/helpers/spacing';
+import screen from 'src/styling/screen';
+import spacing from 'src/styling/spacing';
 import React from 'react';
 
 const headerStyles = css`
@@ -115,7 +115,7 @@ function Header(props) {
 Header.propTypes = {
   /** informs which element to render */
   as: PropTypes.string,
-  /** informs which element style to render for semantics, eg: Render a h2 but give it the h3 styles using variant */
+  /** informs which element style to render for semantics, eg: Render a h2 but give it the h3 styling using variant */
   variant: PropTypes.oneOf(['display', 'xxl', 'xl', 'l', 'm', 's']),
   /** header text */
   text: PropTypes.string,

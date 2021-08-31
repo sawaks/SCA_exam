@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import routes from 'common/routes';
 import Logo from 'components/Icons/listnr-logo.svg';
 import { Desktop, Mobile } from 'components/Screen';
-import spacing from 'styles/helpers/spacing';
-import screen from 'styles/helpers/screen';
+import spacing from 'src/styling/spacing';
+import screen from 'src/styling/screen';
 
 const StyledLogo = styled(Logo)`
   cursor: pointer;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from 'components/Typography/Header';
 import styled from 'styled-components';
-import spacing from 'styles/helpers/spacing';
+import spacing from 'src/styling/spacing';
 import { Flex } from 'components/Grid';
 import Link from 'next/link';
 import CallToAction from 'components/Typography/CallToAction';

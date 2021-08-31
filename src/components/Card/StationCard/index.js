@@ -8,8 +8,8 @@ import { bool, string } from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import screen from 'styles/helpers/screen';
-import spacing from 'styles/helpers/spacing';
+import screen from 'src/styling/screen';
+import spacing from 'src/styling/spacing';
 
 const StationWrapper = styled(Flex)`
   width: 100%;

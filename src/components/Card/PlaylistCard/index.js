@@ -5,8 +5,8 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import screen from 'styles/helpers/screen';
-import spacing from 'styles/helpers/spacing';
+import screen from 'src/styling/screen';
+import spacing from 'src/styling/spacing';
 import { displayCollectionModal } from 'store/actions/userInteractions';
 import Image from 'components/Image';
 

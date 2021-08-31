@@ -1,7 +1,7 @@
 /* stylelint-disable no-descending-specificity */
 import styled, { css } from 'styled-components';
-import screen from 'styles/helpers/screen';
-import rgba from 'styles/helpers/rgba';
+import screen from 'src/styling/screen';
+import rgba from 'src/styling/rgba';
 
 // Base button styling is separated from base button component
 // to enable FormIO to import it so it can override the default bootstrap button styling.
@@ -45,7 +45,7 @@ export const PrimaryButton = css`
   background-color: ${props => (props.text ? props.theme.primaryActive : props.theme.primary)};
 
   &:hover:not([disabled]) {
-    color: ${props => props.theme.whiteColor};
+    color: ${props => props.theme.light};
     border: ${props => (props.showBorder ? `1px solid ${props.theme.primary}` : 'none')};
     background-color: ${props => (props.text ? props.theme.primary : props.theme.primaryActive)};
   }

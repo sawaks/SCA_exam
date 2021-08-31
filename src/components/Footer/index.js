@@ -1,7 +1,7 @@
 import Button from 'components/Button';
 import React from 'react';
 import Section from 'components/Layout/Section';
-import screen from 'styles/helpers/screen';
+import screen from 'src/styling/screen';
 import styled from 'styled-components';
 import { Flex } from 'components/Grid';
 import YouTube from './assets/you-tube.svg';

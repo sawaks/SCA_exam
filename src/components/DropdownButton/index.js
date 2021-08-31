@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Button from 'components/Button';
-import zIndex from 'styles/helpers/zIndex';
-import screen from 'styles/helpers/screen';
+import zIndex from 'src/styling/zIndex';
+import screen from 'src/styling/screen';
 
 const DropdownWrapper = styled.span`
   cursor: pointer;

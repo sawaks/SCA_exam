@@ -1,6 +1,6 @@
 /* eslint-disable react/forbid-prop-types */
 import AppBanner from 'components/AppBanner';
-import { Container } from 'components/Grid';
+import { Container, Flex } from 'components/Grid';
 import FullWidthSection from 'components/Layout/FullWidthSection';
 import Page from 'components/Layout/Page';
 import Head from 'next/head';
@@ -16,7 +16,9 @@ const Home = ({ promotedCategories, downloadAppBanner }) => (
       <meta name="description" content="Browse the best LiSTNR has to offer including Previews and Top Episodes" />
     </Head>
     <Container>
-      { promotedCategories && <PodcastCategories podcastCategories={promotedCategories} /> }
+      <Flex height="75vh">
+        { promotedCategories && <PodcastCategories podcastCategories={promotedCategories} /> }
+      </Flex>
     </Container>
     {downloadAppBanner && (
       <FullWidthSection fullWidth>

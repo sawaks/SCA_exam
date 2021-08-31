@@ -1,8 +1,8 @@
 import React from 'react';
 import { string, oneOf } from 'prop-types';
-import spacing from 'styles/helpers/spacing';
+import spacing from 'src/styling/spacing';
 import styled from 'styled-components';
-import screen from 'styles/helpers/screen';
+import screen from 'src/styling/screen';
 
 const TagWrapper = styled.div`
   color: ${props => (props.variant !== 'white' ? props.theme.secondaryText : props.theme.primaryText)};

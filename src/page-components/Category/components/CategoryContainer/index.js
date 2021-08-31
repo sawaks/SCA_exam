@@ -3,7 +3,7 @@ import Header from 'components/Typography/Header';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import spacing from 'styles/helpers/spacing';
+import spacing from 'src/styling/spacing';
 
 import CategoriesGrid from '../CategoriesGrid';
 

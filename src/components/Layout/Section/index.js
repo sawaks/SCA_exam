@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import spacing from 'styles/helpers/spacing';
-import screen from 'styles/helpers/screen';
+import spacing from 'src/styling/spacing';
+import screen from 'src/styling/screen';
 import Divider from 'components/Divider';
 
 const StyleChildren = styled.div`

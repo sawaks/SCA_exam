@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Flex } from '@rebass/grid';
 import ArrowDown from 'components/Icons/arrow-down.svg';
-import screen from 'styles/helpers/screen';
+import screen from 'src/styling/screen';
 
 const Edge = styled(Flex)`
   position: absolute;

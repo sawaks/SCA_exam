@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import spacing from 'styles/helpers/spacing';
+import spacing from 'src/styling/spacing';
 
 function Card({ children, ...props }) {
   return (

@@ -4,9 +4,9 @@ import Paragraph from 'components/Typography/Paragraph';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { css } from 'styled-components';
-import screen from 'styles/helpers/screen';
-import spacing from 'styles/helpers/spacing';
-import themes from 'styles/theme';
+import screen from 'src/styling/screen';
+import spacing from 'src/styling/spacing';
+import themes from 'src/styling/theme';
 import Image from 'components/Image';
 
 export default function ShowCard({ imageUrl, title, subTitle, as, href, count, countShowLimit, noMaxWidth, colour, index, dataTest, ...rest }) {

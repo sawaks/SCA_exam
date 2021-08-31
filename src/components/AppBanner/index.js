@@ -7,8 +7,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
-import screen from 'styles/helpers/screen';
-import spacing from 'styles/helpers/spacing';
+import screen from 'src/styling/screen';
+import spacing from 'src/styling/spacing';
 import getBrowser from 'utilities/helpers/browser';
 
 function AppBanner({ title, description, backgroundImageUrl }) {

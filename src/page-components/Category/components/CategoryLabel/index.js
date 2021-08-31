@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Box } from '@rebass/grid';
 import Paragraph from 'components/Typography/Paragraph';
-import spacing from 'styles/helpers/spacing';
+import spacing from 'src/styling/spacing';
 
 const StyledLabel = styled(Box)`
   display: inline-block;

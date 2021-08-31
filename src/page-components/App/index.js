@@ -5,7 +5,7 @@ import Head from 'next/head';
 import { any, func, objectOf } from 'prop-types';
 import makeStore from 'store';
 import BackgroundGradient from 'components/Layout/BackgroundGradient';
-import theme from 'styles/theme';
+import theme from 'src/styling/theme';
 import Global from './Global';
 
 const store = makeStore();

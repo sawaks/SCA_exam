@@ -7,7 +7,7 @@ import { Container, Flex, Box } from 'components/Grid';
 import Button from 'components/Button';
 import Page from 'components/Layout/Page';
 import Section from 'components/Layout/Section';
-import screen from 'styles/helpers/screen';
+import screen from 'src/styling/screen';
 import Header from 'components/Typography/Header';
 import Paragraph from 'components/Typography/Paragraph';
 import ErrorIcon from 'components/Icons/no-podcast-copy.svg';

@@ -28,7 +28,7 @@ export default createGlobalStyle`
   }
 
   body {
-    font-size: ${theme.bodyFontSize};
+    font-size: 12px;
     font-family: ${theme.bodyFontFamily};
     font-weight: normal;
     color: ${theme.light};
