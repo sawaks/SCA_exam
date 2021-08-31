@@ -68,7 +68,6 @@ PrevButton.propTypes = {
 PrevButton.defaultProps = {
   onClick: null,
   currentSlide: undefined,
-  gtmBrowseEvent: '',
 };
 
 NextButton.propTypes = {
@@ -79,6 +78,5 @@ NextButton.propTypes = {
 NextButton.defaultProps = {
   onClick: null,
   className: '',
-  gtmBrowseEvent: '',
 };
 

@@ -54,7 +54,7 @@ const CardsSection = styled.div`
    }
 `;
 
-function Slider({ children, title, cardSize, viewAll, viewAllGtm, noDivider, gtmBrowseEvent, showArrows }) {
+function Slider({ children, title, cardSize, viewAll, viewAllGtm, noDivider, showArrows }) {
   const settings = {
     dots: false,
     infinite: false,
@@ -74,8 +74,8 @@ function Slider({ children, title, cardSize, viewAll, viewAllGtm, noDivider, gtm
         settings: lBreakPoint(cardSize),
       },
     ],
-    nextArrow: <NextButton gtmBrowseEvent={gtmBrowseEvent} />,
-    prevArrow: <PrevButton gtmBrowseEvent={gtmBrowseEvent} />,
+    nextArrow: <NextButton />,
+    prevArrow: <PrevButton />,
     arrows: showArrows,
   };
   return (
@@ -104,7 +104,6 @@ Slider.propTypes = {
   }),
   viewAllGtm: PropTypes.func,
   noDivider: PropTypes.bool,
-  gtmBrowseEvent: PropTypes.string,
   gtmViewAllEvent: PropTypes.string,
   showArrows: PropTypes.bool,
 };
@@ -115,7 +114,6 @@ Slider.defaultProps = {
   cardSize: null,
   title: null,
   noDivider: false,
-  gtmBrowseEvent: '',
   gtmViewAllEvent: '',
   showArrows: true,
 };
