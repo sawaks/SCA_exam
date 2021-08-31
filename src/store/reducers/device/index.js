@@ -1,9 +1,7 @@
-import { DETECT_BROWSER, DETECT_PWA, DETECT_DEVICE, SETUP_DEVICE, SET_NOTIFICATION_PERMISSION } from 'store/actions/device';
+import { DETECT_BROWSER, DETECT_DEVICE } from 'store/actions/device';
 
 const initialState = {
-  browser: {},
-  notificationPermStatus: false,
-  pwa: false,
+  browser: null,
   deviceId: null,
 };
 
@@ -12,27 +10,12 @@ export default function device(state = initialState, action) {
     case DETECT_BROWSER:
       return {
         ...state,
-        browser: { ...action.browser },
-      };
-    case DETECT_PWA:
-      return {
-        ...state,
-        pwa: action.isPWA,
+        browser: action.browser,
       };
     case DETECT_DEVICE:
       return {
         ...state,
         deviceId: action.deviceId,
-      };
-    case SETUP_DEVICE:
-      return {
-        ...state,
-        ...action.payload,
-      };
-    case SET_NOTIFICATION_PERMISSION:
-      return {
-        ...state,
-        notificationPermStatus: action.permission,
       };
     default:
       return state;

@@ -9,10 +9,10 @@ import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
 import screen from 'src/styling/screen';
 import spacing from 'src/styling/spacing';
-import getBrowser from 'utilities/helpers/browser';
+import { shallowEqual, useSelector } from 'react-redux';
 
 function AppBanner({ title, description, backgroundImageUrl }) {
-  const isMobile = getBrowser() === 'Mobile';
+  const isMobile = useSelector(state => state.device.browser === 'Mobile', shallowEqual);
   const [ref, inView] = useInView({
     threshold: 0.5,
     triggerOnce: false,
@@ -28,31 +28,29 @@ function AppBanner({ title, description, backgroundImageUrl }) {
   };
 
   return (
-    <>
-      <Block flexDirection={['column', 'row', 'row']} ref={ref} data-test="app-banner">
-        <AppsBackground background="/images/arcs.svg" />
-        <Center>
-          <AppsContent flexDirection="column" justifyContent="center" py={spacing.l} px={[spacing.l, spacing.l, spacing.xl]}>
-            <Header as="h1" variant="xl" text={title} mb="l" />
-            <Paragraph variant="l" transparent text={description} />
-            <Flex mt={[spacing.l, spacing.l, spacing.l]}>
-              <AppIcons />
-            </Flex>
-          </AppsContent>
-          <PhoneArtWrapper width={[1]}>
-            <motion.div
-              animate={inView ? 'visible' : 'hidden'}
-              variants={variants}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              ref={ref}
-            >
-              <PhoneArt background={backgroundImageUrl} />
-            </motion.div>
-          </PhoneArtWrapper>
-        </Center>
-        <PhonesBG width={[1, 0.5, 0.5]} />
-      </Block>
-    </>
+    <Block flexDirection={['column', 'row', 'row']} ref={ref} data-test="app-banner">
+      <AppsBackground background="/images/arcs.svg" />
+      <Center>
+        <AppsContent flexDirection="column" justifyContent="center" py={spacing.l} px={[spacing.l, spacing.l, spacing.xl]}>
+          <Header as="h1" variant="xl" text={title} mb="l" />
+          <Paragraph variant="l" transparent text={description} />
+          <Flex mt={[spacing.l, spacing.l, spacing.l]}>
+            <AppIcons />
+          </Flex>
+        </AppsContent>
+        <PhoneArtWrapper width={[1]}>
+          <motion.div
+            animate={inView ? 'visible' : 'hidden'}
+            variants={variants}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            ref={ref}
+          >
+            <PhoneArt background={backgroundImageUrl} />
+          </motion.div>
+        </PhoneArtWrapper>
+      </Center>
+      <PhonesBG width={[1, 0.5, 0.5]} />
+    </Block>
   );
 }
 
@@ -97,7 +95,7 @@ const AppsBackground = styled.div`
 const PhoneArtWrapper = styled(Box)`
   position: absolute;
   overflow: hidden;
-  top: 228px;
+  top: 227px;
   
   ${screen.mobile} {
     left: 50%;

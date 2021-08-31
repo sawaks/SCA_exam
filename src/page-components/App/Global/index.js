@@ -1,5 +1,6 @@
 import React from 'react';
 import GlobalStyles from 'src/styling/global';
+import BrowserDetection from './BrowserDetection';
 
 /**
  * @method Global
@@ -14,6 +15,7 @@ export default function Global() {
   return (
     <>
       <GlobalStyles />
+      <BrowserDetection />
     </>
   );
 }
