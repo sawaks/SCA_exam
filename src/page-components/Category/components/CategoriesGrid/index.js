@@ -1,5 +1,5 @@
 import { Box, Flex } from '@rebass/grid';
-import routes from 'common/routes';
+import routes from 'routes';
 import ShowCard from 'shared-components/Card/ShowCard';
 import { Row } from 'shared-components/Grid';
 import Header from 'shared-components/Typography/Header';

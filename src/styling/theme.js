@@ -16,7 +16,7 @@ export default {
   formError: '#f67504',
   formSuccess: '#7faaed',
   // Implementation variables
-  // NOTE: These should only be used for common design elements between
+  // NOTE: These should only be used for routes design elements between
   // different components. If they are particular to a component, they should be
   // defined there.
   // If you are unsure if you should be adding anything here, you shouldn't.

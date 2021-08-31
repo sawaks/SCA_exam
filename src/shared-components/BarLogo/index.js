@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import routes from 'common/routes';
+import routes from 'routes';
 import Logo from 'shared-components/Icons/listnr-logo.svg';
 import { Desktop, Mobile } from 'shared-components/Screen';
 import spacing from 'src/styling/spacing';

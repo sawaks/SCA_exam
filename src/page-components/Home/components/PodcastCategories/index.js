@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from 'shared-components/Grid';
 import Link from 'next/link';
-import routes from 'common/routes';
+import routes from 'routes';
 import Slider from 'shared-components/Slider';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import get from 'lodash/get';
 import isEmpty from 'lodash/isEmpty';
-import routes from 'common/routes';
+import routes from 'routes';
 import screen from 'src/styling/screen';
 import styled from 'styled-components';
 import useRouterServer from 'utilities/helpers/useRouterServer';

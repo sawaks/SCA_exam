@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import routes from 'common/routes';
+import routes from 'routes';
 import styled from 'styled-components';
 import { Container, Flex, Box } from 'shared-components/Grid';
 import Button from 'shared-components/Button';
