@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box } from 'components/Grid';
+import { Box } from 'shared-components/Grid';
 import Link from 'next/link';
 import routes from 'common/routes';
-import Slider from 'components/Slider';
+import Slider from 'shared-components/Slider';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
-import CategoryCard from 'components/Card/CategoryCard';
+import CategoryCard from 'shared-components/Card/CategoryCard';
 
 const PodcastCategories = ({ podcastCategories }) => (
   <Slider

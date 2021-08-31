@@ -1,9 +1,9 @@
 import { Box, Flex } from '@rebass/grid';
 import routes from 'common/routes';
-import ShowCard from 'components/Card/ShowCard';
-import { Row } from 'components/Grid';
-import Header from 'components/Typography/Header';
-import Paragraph from 'components/Typography/Paragraph';
+import ShowCard from 'shared-components/Card/ShowCard';
+import { Row } from 'shared-components/Grid';
+import Header from 'shared-components/Typography/Header';
+import Paragraph from 'shared-components/Typography/Paragraph';
 import get from 'lodash/get';
 import Link from 'next/link';
 import PropTypes from 'prop-types';

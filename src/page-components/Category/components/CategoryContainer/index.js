@@ -1,5 +1,5 @@
 import { Box, Flex } from '@rebass/grid';
-import Header from 'components/Typography/Header';
+import Header from 'shared-components/Typography/Header';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';

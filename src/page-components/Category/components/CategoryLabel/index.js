@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box } from '@rebass/grid';
-import Paragraph from 'components/Typography/Paragraph';
+import Paragraph from 'shared-components/Typography/Paragraph';
 import spacing from 'src/styling/spacing';
 
 const StyledLabel = styled(Box)`

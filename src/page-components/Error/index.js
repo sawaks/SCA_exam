@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import routes from 'common/routes';
 import styled from 'styled-components';
-import { Container, Flex, Box } from 'components/Grid';
-import Button from 'components/Button';
-import Page from 'components/Layout/Page';
-import Section from 'components/Layout/Section';
+import { Container, Flex, Box } from 'shared-components/Grid';
+import Button from 'shared-components/Button';
+import Page from 'shared-components/Layout/Page';
+import Section from 'shared-components/Layout/Section';
 import screen from 'src/styling/screen';
-import Header from 'components/Typography/Header';
-import Paragraph from 'components/Typography/Paragraph';
-import ErrorIcon from 'components/Icons/no-podcast-copy.svg';
+import Header from 'shared-components/Typography/Header';
+import Paragraph from 'shared-components/Typography/Paragraph';
+import ErrorIcon from 'shared-components/Icons/no-podcast-copy.svg';
 
 const StyledErrorCode = styled.h1`
   font-size: 60px;

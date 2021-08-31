@@ -1,18 +1,17 @@
-import Footer from 'components/Footer';
-import useRouterServer from 'utilities/helpers/useRouterServer';
-import { Container } from 'components/Grid';
-import Page from 'components/Layout/Page';
-import get from 'lodash/get';
-import isEmpty from 'lodash/isEmpty';
+import Footer from 'shared-components/Footer';
 import Head from 'next/head';
+import Page from 'shared-components/Layout/Page';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { getCategories } from 'utilities/api/graphql/categories/queryMethods';
-import styled from 'styled-components';
-import screen from 'src/styling/screen';
-
-import { LISTNR_META } from 'utilities/constants';
+import get from 'lodash/get';
+import isEmpty from 'lodash/isEmpty';
 import routes from 'common/routes';
+import screen from 'src/styling/screen';
+import styled from 'styled-components';
+import useRouterServer from 'utilities/helpers/useRouterServer';
+import { Container } from 'shared-components/Grid';
+import { LISTNR_META } from 'utilities/constants';
+import { getCategories } from 'utilities/api/graphql/categories/queryMethods';
 import CategoriesContainer from './components/CategoryContainer';
 
 const StyledContainer = styled(Container)`

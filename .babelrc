@@ -23,7 +23,7 @@
       {
         "root": ["./src", "./"],
         "alias": {
-          "components": "./src/components",
+          "shared-components": "./src/shared-components",
           "page-components": "./src/page-components",
           "store": "./src/store",
           "styling": "./src/styling",

@@ -1,8 +1,8 @@
 /* eslint-disable react/forbid-prop-types */
-import AppBanner from 'components/AppBanner';
-import { Container, Flex } from 'components/Grid';
-import FullWidthSection from 'components/Layout/FullWidthSection';
-import Page from 'components/Layout/Page';
+import AppBanner from 'shared-components/AppBanner';
+import { Container, Flex } from 'shared-components/Grid';
+import FullWidthSection from 'shared-components/Layout/FullWidthSection';
+import Page from 'shared-components/Layout/Page';
 import Head from 'next/head';
 import { any, arrayOf, shape, string } from 'prop-types';
 import React from 'react';
