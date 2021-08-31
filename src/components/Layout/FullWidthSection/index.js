@@ -1,7 +1,7 @@
 import { bool, node, oneOfType, string } from 'prop-types';
 import React from 'react';
 import { Container } from 'components/Grid';
-import Section from 'components/Section';
+import Section from 'components/Layout/Section';
 
 const FullWidthSection = ({ fullWidth = null, children }) => {
   if (fullWidth) {

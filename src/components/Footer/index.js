@@ -1,14 +1,13 @@
 import Button from 'components/Button';
-import { Flex } from 'components/Grid';
-import Section from 'components/Section';
 import React from 'react';
-import styled from 'styled-components';
+import Section from 'components/Layout/Section';
 import screen from 'styles/helpers/screen';
-
-import Facebook from './assets/Facebook.svg';
-import Instagram from './assets/Instagram.svg';
-import Twitter from './assets/Twitter.svg';
+import styled from 'styled-components';
+import { Flex } from 'components/Grid';
 import YouTube from './assets/you-tube.svg';
+import Twitter from './assets/Twitter.svg';
+import Instagram from './assets/Instagram.svg';
+import Facebook from './assets/Facebook.svg';
 
 const StyledSection = styled(Section)`
   padding-top: 12px;

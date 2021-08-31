@@ -6,11 +6,11 @@ import styled from 'styled-components';
 import { Container, Flex, Box } from 'components/Grid';
 import Button from 'components/Button';
 import Page from 'components/Layout/Page';
-import Section from 'components/Section';
 import screen from 'styles/helpers/screen';
 import Header from 'components/Typography/Header';
 import Paragraph from 'components/Typography/Paragraph';
 import ErrorIcon from 'components/Icons/no-podcast-copy.svg';
+import Section from 'components/Layout/Section';
 
 const Styled404 = styled.h1`
   font-size: 60px;

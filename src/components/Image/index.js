@@ -1,5 +1,5 @@
 import React from 'react';
-import { number, string, oneOfType } from 'prop-types';
+import { number, string, oneOfType, bool } from 'prop-types';
 import { useInView } from 'react-intersection-observer';
 import styled, { css } from 'styled-components';
 
@@ -38,6 +38,7 @@ Image.propTypes = {
   src: string.isRequired,
   alt: string,
   rootMarginY: string,
+  imageReady: bool,
 };
 
 Image.defaultProps = {
@@ -45,6 +46,7 @@ Image.defaultProps = {
   height: '100%',
   alt: '',
   rootMarginY: '120px',
+  imageReady: false,
 };
 
 export default Image;

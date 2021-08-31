@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { Container, Flex, Box } from 'components/Grid';
 import Button from 'components/Button';
 import Page from 'components/Layout/Page';
-import Section from 'components/Section';
+import Section from 'components/Layout/Section';
 import screen from 'styles/helpers/screen';
 import Header from 'components/Typography/Header';
 import Paragraph from 'components/Typography/Paragraph';

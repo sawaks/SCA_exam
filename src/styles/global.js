@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import styledNormalize from 'styled-normalize';
 import styledReactSlick from './react-slick';
-import reactToastify from './react-toastify';
 import theme from './theme';
 
 export default createGlobalStyle`
@@ -9,8 +8,6 @@ export default createGlobalStyle`
   ${styledNormalize};
 
   ${styledReactSlick};
-
-  ${reactToastify(theme)};
 
   @font-face {
     font-family: 'dunbar-tall';
