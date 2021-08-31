@@ -10,7 +10,7 @@ import CategoryCard from 'shared-components/Card/CategoryCard';
 const PodcastCategories = ({ podcastCategories }) => (
   <Slider
     slidesToScroll={2}
-    title="View by Category"
+    title="Categories"
   >
     {podcastCategories.map(category => (
       <Box key={category.slug} px="6px">
