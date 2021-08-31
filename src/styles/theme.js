@@ -32,6 +32,6 @@ export default {
   blackColor: '#000000',
   // Reserved for rebass/grid
   // https://github.com/rebassjs/grid#theming
-  breakpoints: ['40em', '52em', '64em', '76em'], // if any are added, make sure to update ./media.js
+  breakpoints: ['40em', '52em', '64em', '76em'], // if any are added, make sure to update ./screen.js
   space: [0, 3, 6, 12, 24, 48, 96, 192, 384],
 };

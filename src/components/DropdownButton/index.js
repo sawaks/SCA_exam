@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Button from 'components/Button';
 import zIndex from 'styles/helpers/zIndex';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 
 const DropdownWrapper = styled.span`
   cursor: pointer;
@@ -24,7 +24,7 @@ const Dropdown = styled.span`
   right: ${props => (props.mobileOffsetX ? `${props.mobileOffsetX}` : '30px')};
   visibility: ${props => (props.isVisible ? 'visible' : 'hidden')};
 
-  ${screen.md} {
+  ${screen.tablet} {
     width: ${props => (props.boxWidth ? `${props.boxWidth}` : '130px')};
     height: ${props => (props.boxHeight ? `${props.boxHeight}` : 'initial')};
     bottom: ${props => (props.offsetY ? `${props.offsetY}` : '0px')};

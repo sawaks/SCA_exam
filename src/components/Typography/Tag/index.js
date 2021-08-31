@@ -1,7 +1,7 @@
 /* stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix */
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import spacing from 'styles/helpers/spacing';
 import React from 'react';
 
@@ -38,7 +38,7 @@ const TagWrapper = styled(TagBase)`
   font-size: 10px;
   font-weight: bold;
 
-  ${screen.md} {
+  ${screen.tablet} {
     font-size: 12px;
   }
 `;
@@ -50,7 +50,7 @@ const MultiLineEllipsis = styled(MultiLineEllipsisBase)`
   line-height: ${props => props.lineHeight};
   -webkit-line-clamp: ${props => props.linesToShow};
 
-  ${screen.md} {
+  ${screen.tablet} {
     max-height: calc(12 * ${props => props.lineHeight} * ${props => props.linesToShow} ); /* Fallback for non-webkit */
     font-size: 12px;
   }

@@ -7,7 +7,7 @@ import { Container, Flex, Box } from 'components/Grid';
 import Button from 'components/Button';
 import Page from 'components/Layout/Page';
 import Section from 'components/Section';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import Header from 'components/Typography/Header';
 import Paragraph from 'components/Typography/Paragraph';
 import ErrorIcon from 'components/Icons/no-podcast-copy.svg';
@@ -15,7 +15,7 @@ import ErrorIcon from 'components/Icons/no-podcast-copy.svg';
 const StyledErrorCode = styled.h1`
   font-size: 60px;
   margin: 20px 0;
-  ${screen.md} {
+  ${screen.tablet} {
     font-size: 130px;
   }
 `;
@@ -26,7 +26,7 @@ const StyledText = styled(Flex)`
 
 const Content = styled(Flex)`
   min-height: calc(100vh - 400px);
-  ${screen.md} {
+  ${screen.tablet} {
     min-height: calc(100vh - 300px);
   }
 `;

@@ -4,7 +4,7 @@ import NavBar from 'components/NavBar';
 import { bool, string, node } from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import zIndex from 'styles/helpers/zIndex';
 import spacing from 'styles/helpers/spacing';
 import { Flex } from '@rebass/grid';
@@ -14,11 +14,11 @@ const StyledBg = styled(Box)`
    position: relative;
    top: -49px;
 
-  ${screen.sm} {
+  ${screen.mobile} {
    top: -100px;
   }
 
-   ${screen.lg} {
+   ${screen.laptop} {
     top: -138px;
   }
 `;
@@ -33,7 +33,7 @@ const HeaderBar = styled(Box)`
   width: 100%;
   position: relative;
 
-  ${screen.md} {
+  ${screen.tablet} {
     z-index: 13;
   }
 `;
@@ -46,7 +46,7 @@ const StyledWrapper = styled(Box)`
 
 const StyledChildren = styled(Box)`
   position: relative;
-  ${screen.sm} {
+  ${screen.mobile} {
     padding-top: 120px;
   }
   ${addNavbarHeight('padding-top', [20, 0, 46])};

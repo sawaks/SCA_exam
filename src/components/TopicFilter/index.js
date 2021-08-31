@@ -5,7 +5,7 @@ import FilterIcon from 'components/Icons/filter-list.svg';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import zIndex from 'styles/helpers/zIndex';
 
 const StyledFilterContainer = styled(Flex)`
@@ -26,7 +26,7 @@ const StyledDropDown = styled(Flex)`
    align-items: center;
    justify-content: center;
 
-  ${screen.md} {
+  ${screen.tablet} {
     width: 44px;
     height: 44px;
   }

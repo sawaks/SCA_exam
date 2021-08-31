@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import spacing from 'styles/helpers/spacing';
 import React from 'react';
 
@@ -25,7 +25,7 @@ const fontSize = ({ desktop, mobile, fontWeight = 'bold', lineHeight = 'normal' 
   font-size: ${mobile};
   font-weight: ${fontWeight};
 
-  ${screen.sm} {
+  ${screen.mobile} {
     font-size: ${desktop};
     line-height: ${lineHeight};
   }
@@ -70,7 +70,7 @@ const fontSizeEllipsis = ({ mobile, desktop }) => css`
   line-height: ${props => props.lineHeight};
   -webkit-line-clamp: ${props => props.linesToShow};  /* stylelint-disable-line property-no-vendor-prefix */
 
-  ${screen.sm} {
+  ${screen.mobile} {
     max-height: calc(${desktop} * ${props => props.lineHeight} * ${props => props.linesToShow} ); /* Fallback for non-webkit */
     font-size: ${desktop};
   }

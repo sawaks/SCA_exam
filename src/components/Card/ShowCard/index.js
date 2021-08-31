@@ -4,7 +4,7 @@ import Paragraph from 'components/Typography/Paragraph';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { css } from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import spacing from 'styles/helpers/spacing';
 import themes from 'styles/theme';
 import Image from 'components/Image';
@@ -37,7 +37,7 @@ const FixedWidthCss = css`
   width: 159px;
   height: 158px;
 
-  ${screen.md} {
+  ${screen.tablet} {
     width: 258px;
     height: 258px;
     max-width: 258px;
@@ -47,7 +47,7 @@ const FixedWidthCss = css`
 const FixedWidthOnlyCss = css`
   width: 159px;
   max-width: 159px;
-  ${screen.md} {
+  ${screen.tablet} {
     width: 258px;
     max-width: 258px;
   }
@@ -69,7 +69,7 @@ const StyledCard = styled.div`
   overflow: hidden;
   ${props => (props.noMaxWidth ? NoMaxWidthCss : FixedWidthCss)};
 
-  ${screen.md} {
+  ${screen.tablet} {
     border-radius: 12px;
   }
 
@@ -89,7 +89,7 @@ const HeaderWrapper = styled.div`
  ${props => (props.noMaxWidth ? NoMaxWidthCss : FixedWidthOnlyCss)};
  > * {
   -webkit-line-clamp: 1;
-  ${screen.md} {
+  ${screen.tablet} {
     -webkit-line-clamp: 1;
   }
 }

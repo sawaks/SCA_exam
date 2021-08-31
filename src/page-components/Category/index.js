@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { getCategories } from 'utilities/api/graphql/categories/queryMethods';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 
 import { LISTNR_META } from 'utilities/constants';
 import routes from 'common/routes';
@@ -18,7 +18,7 @@ import CategoriesContainer from './components/CategoryContainer';
 const StyledContainer = styled(Container)`
   padding: 0;
 
-  ${screen.sm} {
+  ${screen.mobile} {
     padding: 12px;
   }
 `;

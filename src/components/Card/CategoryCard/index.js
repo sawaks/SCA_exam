@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import { Flex } from 'components/Grid';
 import Header from 'components/Typography/Header';
 import Image from 'components/Image';
@@ -30,7 +30,7 @@ const StyledCard = styled.div`
   overflow:hidden;
   position: relative;
 
-  ${screen.md} {
+  ${screen.tablet} {
     border-radius: 12px;
     height: 136px;
     width: 258px;
@@ -52,7 +52,7 @@ const TextWrapper = styled(Flex)`
   top: 0;
   padding: 8px;
 
-  ${screen.md} {
+  ${screen.tablet} {
     padding: 12px;
   }
 `;

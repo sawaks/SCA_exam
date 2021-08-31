@@ -5,7 +5,7 @@ import routes from 'common/routes';
 import Logo from 'components/Icons/listnr-logo.svg';
 import { Desktop, Mobile } from 'components/Screen';
 import spacing from 'styles/helpers/spacing';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 
 const StyledLogo = styled(Logo)`
   cursor: pointer;
@@ -19,11 +19,11 @@ const StyledLogo = styled(Logo)`
     fill: #dcecf9;
   }
 
-  ${screen.md} {
+  ${screen.tablet} {
     margin: ${spacing.s} ${spacing.m} ${spacing.s} 0;
   }
 
-  ${screen.xl} {
+  ${screen.desktop} {
     height: 31px;
     width: 185px;
   }

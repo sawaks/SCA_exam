@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Flex } from '@rebass/grid';
 import ArrowDown from 'components/Icons/arrow-down.svg';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 
 const Edge = styled(Flex)`
   position: absolute;
@@ -17,7 +17,7 @@ const Edge = styled(Flex)`
   justify-content: ${props => ((props.direction === 'right') ? 'flex-end' : 'flex-start')};
   pointer-events: ${props => (props.visible ? 'initial' : 'none')};
 
-  ${screen.md} {
+  ${screen.tablet} {
     display: flex;
   }
 `;

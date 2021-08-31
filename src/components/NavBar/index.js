@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Flex } from 'components/Grid';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import spacing from 'styles/helpers/spacing';
 import SearchBar from 'components/SearchBar';
 import Headroom from 'react-headroom';
@@ -13,7 +13,7 @@ const StyledBarUI = styled(Flex)`
   text-transform: uppercase;
   transition: top 0.3s;
 
-  ${screen.md} {
+  ${screen.tablet} {
     font-size: 14px;
     letter-spacing: 1.2px;
   }

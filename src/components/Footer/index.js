@@ -3,7 +3,7 @@ import { Flex } from 'components/Grid';
 import Section from 'components/Section';
 import React from 'react';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 
 import Facebook from './assets/Facebook.svg';
 import Instagram from './assets/Instagram.svg';
@@ -14,7 +14,7 @@ const StyledSection = styled(Section)`
   padding-top: 12px;
   padding-bottom: 48px;
 
-  ${screen.md} {
+  ${screen.tablet} {
     padding-bottom: 24px;
   }
 `;
@@ -46,7 +46,7 @@ const SocialIconWrapper = styled.span`
     height: 24px;
 
   }
-  ${screen.md}{
+  ${screen.tablet}{
     a {
       min-width: 0;
       padding: 36px 24px 0 24px;

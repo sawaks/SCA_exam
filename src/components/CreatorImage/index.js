@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Box } from '@rebass/grid';
 import spacing from '../../styles/helpers/spacing';
-import screen from '../../styles/helpers/media';
+import screen from '../../styles/helpers/screen';
 
 const StyledImageContainer = styled(Box)`
   flex-shrink: 0;
@@ -16,7 +16,7 @@ const StyledImageContainer = styled(Box)`
   background-color: ${props => props.backgroundColour};
 
 
-  ${screen.md} {
+  ${screen.tablet} {
     width: 320px;
     height: 320px;
     border-radius: 12px;

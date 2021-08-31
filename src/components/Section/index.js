@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import spacing from 'styles/helpers/spacing';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import Divider from 'components/Divider';
 
 const StyleChildren = styled.div`
@@ -14,7 +14,7 @@ const StyleChildren = styled.div`
     display: none;
   }
 
-  ${screen.md} {
+  ${screen.tablet} {
     padding-bottom: ${props => (props.smallBottomPadding ? spacing.l : spacing.xl)};
    }
 `;

@@ -6,11 +6,10 @@ import theme from '../theme';
 const { breakpoints } = theme;
 
 const screen = {
-  sm: `@media screen and (min-width: ${breakpoints[0]})`,
-  md: `@media screen and (min-width: ${breakpoints[1]})`,
-  lg: `@media screen and (min-width: ${breakpoints[2]})`,
-  xl: `@media screen and (min-width: ${breakpoints[3]})`,
+  mobile: `@media screen and (min-width: ${breakpoints[0]})`,
+  tablet: `@media screen and (min-width: ${breakpoints[1]})`,
+  laptop: `@media screen and (min-width: ${breakpoints[2]})`,
+  desktop: `@media screen and (min-width: ${breakpoints[3]})`,
 };
 
 export default screen;
-

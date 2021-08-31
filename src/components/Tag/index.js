@@ -2,7 +2,7 @@ import React from 'react';
 import { string, oneOf } from 'prop-types';
 import spacing from 'styles/helpers/spacing';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 
 const TagWrapper = styled.div`
   color: ${props => (props.variant !== 'white' ? props.theme.secondaryText : props.theme.primaryText)};
@@ -12,7 +12,7 @@ const TagWrapper = styled.div`
   margin: 3px ${spacing.s} 3px 0;
   text-transform: uppercase;
 
-  ${screen.md} {
+  ${screen.tablet} {
     font-size: 12px;
     margin-right: 12px;
   }

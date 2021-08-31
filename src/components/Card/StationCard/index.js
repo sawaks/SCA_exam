@@ -8,7 +8,7 @@ import { bool, string } from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import spacing from 'styles/helpers/spacing';
 
 const StationWrapper = styled(Flex)`
@@ -17,7 +17,7 @@ const StationWrapper = styled(Flex)`
   &:first-child {
     margin-top: 0;
   }
-  ${screen.md} {
+  ${screen.tablet} {
     margin: ${spacing.l} 0;
   }
 `;
@@ -33,7 +33,7 @@ const StyledCard = styled(Flex)`
   min-height: 230px;
   flex-direction: column;
   justify-content: flex-end;
-  ${screen.md} {
+  ${screen.tablet} {
     padding: ${spacing.l};
     flex-direction: row;
     justify-content: flex-start;
@@ -64,7 +64,7 @@ const TextWrapper = styled(Flex)`
   h3 {
     width: 55%;
   }
-  ${screen.md} {
+  ${screen.tablet} {
     height: 182px;
     width: 72.5%;
     h3 {
@@ -85,7 +85,7 @@ const StationImage = styled.img`
   background: ${props => props.colour || props.theme.background} no-repeat;
   padding: 10px;
   
-  ${screen.md} {
+  ${screen.tablet} {
     width: 182px;
     height: 182px;
     right: ${spacing.l};
@@ -106,7 +106,7 @@ const PlayWrapper = styled(Flex)`
     width: 14px;
   }  
   
-  ${screen.md} {
+  ${screen.tablet} {
     height: 58px;
     width: 58px;
     padding-left: 2px;
@@ -125,7 +125,7 @@ const ArtworkWrapper = styled(Flex)`
   background: ${props => `url(${props.artwork}) no-repeat` || '#dd3636'};
   background-size: 40px 40px;
   margin: 0 ${spacing.m} 0 0;
-  ${screen.md} {
+  ${screen.tablet} {
     height: 58px;
     width: 58px;
     background-size: 58px 58px;

@@ -1,13 +1,13 @@
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import { css } from 'styled-components';
 
 function addNavbarHeight(property, propertyValues) {
   return css`
     ${property}: ${propertyValues[0] + 49}px;
-    ${screen.md} {
+    ${screen.tablet} {
       ${property}: ${propertyValues[1] + 114}px;
     }
-    ${screen.lg} {
+    ${screen.laptop} {
       ${property}: ${propertyValues[2] + 138}px;
     }
   `;

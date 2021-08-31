@@ -3,7 +3,7 @@ import { string } from 'prop-types';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import screen from '../../styles/helpers/media';
+import screen from '../../styles/helpers/screen';
 import spacing from '../../styles/helpers/spacing';
 
 const StyledBlock = styled.div`
@@ -11,7 +11,7 @@ const StyledBlock = styled.div`
   text-align: center;
   color: ${props => props.theme.secondaryText};
 
-  ${screen.md} {
+  ${screen.tablet} {
     margin-top: ${spacing.xl};
     text-align: left;
     max-width: 394px;

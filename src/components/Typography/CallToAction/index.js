@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import spacing from 'styles/helpers/spacing';
 import React from 'react';
 
@@ -19,14 +19,14 @@ const StyledText = styled.span`
 
 const MobileText = styled.span`
   display: inline-block;
-  ${screen.md} {
+  ${screen.tablet} {
     display: none;
    }
 `;
 
 const DesktopText = styled.span`
   display: none;
-  ${screen.md} {
+  ${screen.tablet} {
     display: inline-block;
    }
 `;

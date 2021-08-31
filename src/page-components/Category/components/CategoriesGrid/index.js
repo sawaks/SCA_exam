@@ -9,7 +9,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import spacing from 'styles/helpers/spacing';
 
 import FilterButton from '../FilterButton';
@@ -19,7 +19,7 @@ const StyledCategoryGrid = styled(Box)`
    border-radius: 26px;
    padding: ${spacing.m};
 
-   ${screen.md} {
+   ${screen.tablet} {
     padding: 15px;
   }
 
@@ -28,18 +28,18 @@ const StyledCategoryGrid = styled(Box)`
 const StyledBox = styled(Box)`
    max-width: 100%;
 
-  ${screen.sm} {
+  ${screen.mobile} {
     max-width: 480px;
   }
 
-  ${screen.lg} {
+  ${screen.laptop} {
     max-width: 800px;
   }
 `;
 const TextWrapper = styled.div`
    margin-bottom: 12px;
 
-   ${screen.sm} {
+   ${screen.mobile} {
     margin-bottom: 0;
   }
 `;

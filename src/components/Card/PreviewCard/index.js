@@ -5,7 +5,7 @@ import get from 'lodash/get';
 import { Flex } from 'components/Grid';
 import routes from 'common/routes';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import Header from 'components/Typography/Header';
 import spacing from 'styles/helpers/spacing';
 import PlayIcon from 'components/Icons/play-xl.svg';
@@ -102,13 +102,13 @@ const PreviewWrapper = styled.div`
   padding-left: 7px;
   padding-right: ${props => ((props.index + 1) % 3 === 0 ? 0 : '2px')};
 
-  ${screen.sm} {
+  ${screen.mobile} {
     width: 248px;
     height: auto;
     padding: 0 14px;
   }
 
-  ${screen.md} {
+  ${screen.tablet} {
     padding: 0 ${spacing.l};
   }
 `;
@@ -134,7 +134,7 @@ const StyledCard = styled.div`
     position: absolute;
   }
 
-  ${screen.md} {
+  ${screen.tablet} {
     width: 220px;
     height: 220px;
   }
@@ -147,7 +147,7 @@ const CardImage = styled.div`
   height: 100px;
   background-color: ${props => props.colour};
 
-  ${screen.md} {
+  ${screen.tablet} {
     width: 202px;
     height: 202px;
   }
@@ -157,7 +157,7 @@ const HeaderWrapper = styled.div`
   width: 112px;
   text-align: center;
 
-  ${screen.md} {
+  ${screen.tablet} {
     width: 224px;
   }
 `;
@@ -187,7 +187,7 @@ const PlayIconWrapper = styled.div`
     }
   }
 
-  ${screen.md}{
+  ${screen.tablet}{
     bottom: 0px;
     right: 40px;
 
@@ -202,7 +202,7 @@ const InfoIconWrapper = styled.div`
   margin: 4px;
   text-align: center;
 
-  ${screen.md} {
+  ${screen.tablet} {
     margin: 6px;
   }
 `;
@@ -211,7 +211,7 @@ const StyledInfoIcon = styled(InfoIcon)`
   width: 12px;
   height: 12px;
 
-  ${screen.md} {
+  ${screen.tablet} {
     width: 18px;
     height: 18px;
   }

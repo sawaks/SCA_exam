@@ -3,7 +3,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { oneOf, string, node, bool, number, oneOfType } from 'prop-types';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import spacing from 'styles/helpers/spacing';
 
 const paragraphStyles = css`
@@ -43,7 +43,7 @@ const MultiLineEllipsisBase = styled(ParagraphBase)`
 const fontSize = ({ mobile, desktop }) => css`
   font-size: ${mobile};
 
-  ${screen.md} {
+  ${screen.tablet} {
     font-size: ${desktop};
   }
 `;
@@ -54,7 +54,7 @@ const fontSizeEllipsis = ({ mobile, desktop }) => css`
   line-height: ${props => props.lineHeight};
   -webkit-line-clamp: ${props => props.linesToShow};
 
-  ${screen.md} {
+  ${screen.tablet} {
     max-height: calc(${desktop} * ${props => props.lineHeight} * ${props => props.linesToShow} ); /* Fallback for non-webkit */
     font-size: ${desktop};
   }

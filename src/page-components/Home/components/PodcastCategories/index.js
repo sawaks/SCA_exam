@@ -12,7 +12,7 @@ const PodcastCategories = ({ podcastCategories }) => (
     slidesToScroll={2}
     title="View by Category"
   >
-    {podcastCategories.map((category, i) => (
+    {podcastCategories.map(category => (
       <Box key={category.slug} px="6px">
         <Link
           href={`${routes.category}/${category.slug}`}

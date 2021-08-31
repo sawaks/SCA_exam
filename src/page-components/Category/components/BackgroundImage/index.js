@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Flex, Box } from '@rebass/grid';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import addNavbarHeight from 'styles/helpers/add-navbar-height';
 
 const StyledWrapper = styled(Box)`
@@ -14,7 +14,7 @@ const StyledWrapper = styled(Box)`
 const StyledChildren = styled(Box)`
   position: relative;
    ${addNavbarHeight('padding-top', [10, 70, 135])};
-   ${screen.sm} {
+   ${screen.mobile} {
     ${addNavbarHeight('padding-top', [90, 70, 135])};
   }
 `;
@@ -34,10 +34,10 @@ const StyledBackgroundGradient = styled(Box)`
   bottom: 0;
   width: inherit;
   height: 273px;
-  ${screen.md} {
+  ${screen.tablet} {
     height: 246px;
   }
-  ${screen.lg} {
+  ${screen.laptop} {
     height: 461px;
   }
   background: ${props => props.theme.backgroundGradient};

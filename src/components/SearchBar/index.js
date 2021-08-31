@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import Icon from './assets/search-icon.svg';
 
 const SearchWrapper = styled.div`
   width: 100%;
-  ${screen.sm} {
+  ${screen.mobile} {
     margin-left: auto;
     align-self: center;
     position: relative;
@@ -22,7 +22,7 @@ const SearchForm = styled.form`
   border: solid 1px rgba(255, 255, 255, 0.31);
   background-color: rgba(255, 255, 255, 0.13);
   padding: 0px 7px 0 10px;
-  ${screen.sm} {
+  ${screen.mobile} {
     height: 46px;
     padding: 0px 10px 0 14px;
   }
@@ -59,7 +59,7 @@ const SearchButton = styled.button`
 
 const SearchLogo = styled(Icon)`
   fill: ${props => (props.focusMode ? props.theme.dark : props.theme.light)};
-  ${screen.md} {
+  ${screen.tablet} {
     width: 22px;
     height: 22px;
   }

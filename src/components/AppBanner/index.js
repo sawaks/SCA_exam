@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import spacing from 'styles/helpers/spacing';
 import getBrowser from 'utilities/helpers/browser';
 
@@ -64,7 +64,7 @@ const Center = styled.div`
   right: 0;
   margin: 0 auto;
   
-  ${screen.sm} {
+  ${screen.mobile} {
     height: 424px;
   }
 `;
@@ -73,7 +73,7 @@ const AppsContent = styled(Flex)`
   position: absolute;
   left: 0;
   
-  ${screen.sm} {
+  ${screen.mobile} {
     height: 100%;
     width: 50%;
   }
@@ -87,7 +87,7 @@ const AppsBackground = styled.div`
   background: ${props => `url(${props.background})`} no-repeat center right;
   height: 700px;
 
-  ${screen.sm} {
+  ${screen.mobile} {
     background-size: cover;
     height: 424px;
     width: 50%;
@@ -99,7 +99,7 @@ const PhoneArtWrapper = styled(Box)`
   overflow: hidden;
   top: 228px;
   
-  ${screen.sm} {
+  ${screen.mobile} {
     left: 50%;
     height: 100%;
     top: 0;
@@ -113,14 +113,14 @@ const PhoneArt = styled.div`
   background-position-y: -40px;
   height: 382px;
 
-  ${screen.sm} {
+  ${screen.mobile} {
     height: 824px;
     background-position-x: -260px;
     background-position-y: -10px;
     background-size: initial;
   }
 
-  ${screen.md} {
+  ${screen.tablet} {
     height: 824px;
     background-position-x: -170px;
     background-position-y: -20px;
@@ -134,7 +134,7 @@ const Block = styled(Flex)`
   background: #fff3d3;
   overflow: hidden;
 
-  ${screen.sm} {
+  ${screen.mobile} {
     max-height: 424px;
   }
 `;

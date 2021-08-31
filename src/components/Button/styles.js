@@ -1,6 +1,6 @@
 /* stylelint-disable no-descending-specificity */
 import styled, { css } from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 import rgba from 'styles/helpers/rgba';
 
 // Base button styling is separated from base button component
@@ -30,7 +30,7 @@ export const StyledButton = css`
     opacity: ${props => (props.submitting ? 1 : 0.4)};
   }
 
-  ${screen.md} {
+  ${screen.tablet} {
     min-width: ${props => (props.minWidthDesktop ? props.minWidthDesktop : '180px')};
     max-width: ${props => (props.maxWidthDesktop ? props.maxWidthDesktop : 'none')};
   }

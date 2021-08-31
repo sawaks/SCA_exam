@@ -3,7 +3,7 @@ import CTA from 'components/Typography/CallToAction';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { css } from 'styled-components';
-import screen from 'styles/helpers/media';
+import screen from 'styles/helpers/screen';
 
 const ButtonIcon = ({ text, mobileText, icon, highlighted }) => {
   if (text) {
@@ -52,7 +52,7 @@ const StyledIcon = styled.div`
   ${IconStyle};
   width: 36px;
   height: 36px;
-  ${screen.md} {
+  ${screen.tablet} {
     position:absolute;
     width: 40px;
     height: 40px;
