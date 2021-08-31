@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-import { convertSecondsToMinutes, calculateAge, convertDate, formatSecondsToTime, timeAgo } from './dateTime';
+import { convertSecondsToMinutes, calculateAge, convertDate, formatSecondsToTime, timeAgo } from './date-time';
 
 // convertSecondsToMinutes
 test('convertSecondsToMinutes test', () => {

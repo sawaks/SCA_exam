@@ -1,4 +1,4 @@
-import { CLOSE_SIGNUP_MODAL, DISPLAY_SIGNUP_MODAL } from 'store/actions/userInteractions';
+import { CLOSE_SIGNUP_MODAL, DISPLAY_SIGNUP_MODAL } from 'store/actions/user-interactions';
 
 const initialState = {
   displaySignUpModal: false,

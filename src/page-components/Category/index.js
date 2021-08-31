@@ -8,11 +8,11 @@ import isEmpty from 'lodash/isEmpty';
 import routes from 'routes';
 import screen from 'src/styling/screen';
 import styled from 'styled-components';
-import useRouterServer from 'utilities/helpers/useRouterServer';
 import { Container } from 'shared-components/Grid';
 import { LISTNR_META } from 'utilities/constants';
-import { getCategories } from 'integration/graphql/categories/queryMethods';
+import { getCategories } from 'integration/graphql/categories/query-methods';
 import CategoriesContainer from './components/CategoryContainer';
+import useRouterServer from '../../hooks/useRouterServer';
 
 const StyledContainer = styled(Container)`
   padding: 0;

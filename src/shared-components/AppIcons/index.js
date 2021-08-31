@@ -4,7 +4,7 @@ import GooglePlayIcon from 'shared-components/Icons/google-play.svg';
 import React, { useEffect, useState } from 'react';
 import spacing from 'src/styling/spacing';
 import { OS_TYPE } from 'utilities/constants';
-import { getOS } from 'utilities/helpers/getDeviceInfo';
+import { getOS } from 'utilities/helpers/device-info';
 
 function AppIcons() {
   const [os, setOs] = useState('');
