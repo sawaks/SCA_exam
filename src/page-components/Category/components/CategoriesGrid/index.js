@@ -98,9 +98,8 @@ CategoriesGrid.propTypes = {
     slug: PropTypes.string,
     name: PropTypes.string,
     images: PropTypes.shape({
-      squareMedium: PropTypes.shape({
+      squareLarge: PropTypes.shape({
         url: PropTypes.string,
-        pixelWidth: PropTypes.number,
       }),
     }),
   })),

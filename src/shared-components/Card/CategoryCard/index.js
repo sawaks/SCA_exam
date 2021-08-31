@@ -6,16 +6,14 @@ import { Flex } from 'shared-components/Grid';
 import Header from 'shared-components/Typography/Header';
 import Image from 'shared-components/Image';
 
-function CategoryCard({ heading, ...props }) {
+function CategoryCard({ heading, bg, image }) {
   return (
-    <>
-      <StyledCard {...props}>
-        <CategoryImage src={props.image} alt={heading} />
-        <TextWrapper alignItems="flex-end" height="100%">
-          <Header as="h3" variant="s" text={heading} />
-        </TextWrapper>
-      </StyledCard>
-    </>
+    <StyledCard bg={bg}>
+      <CategoryImage src={image} alt={heading} />
+      <TextWrapper alignItems="flex-end" height="100%">
+        <Header as="h3" variant="s" text={heading} />
+      </TextWrapper>
+    </StyledCard>
   );
 }
 const StyledCard = styled.div`
@@ -60,6 +58,7 @@ const TextWrapper = styled(Flex)`
 CategoryCard.propTypes = {
   heading: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  bg: PropTypes.string.isRequired,
 };
 
 export default CategoryCard;
