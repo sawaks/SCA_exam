@@ -11,7 +11,7 @@ function CategoryCard({ heading, bg, image }) {
     <StyledCard bg={bg}>
       <CategoryImage src={image} alt={heading} />
       <TextWrapper alignItems="flex-end" height="100%">
-        <Header as="h3" variant="s" text={heading} />
+        <Header as="h3" variant="s" text={heading} linesToShow={1} />
       </TextWrapper>
     </StyledCard>
   );

@@ -1,18 +1,19 @@
 # SCA Frontend Take Home Test
 
-Thanks for taking the SCA Frontend Coding Challenge! Please read the following instructions carefully.
+Hello! 👋
 
-This challenge **should take no longer than a coupe of hours** to complete & is here to assess your ability to write Javascript, HTML and CSS in a real world scenario.
- 
-## The Challenge
-The task is to complete the 'Category' Page according to the design mocks.
+Thanks for your time to take this coding test. Please read the following instructions carefully.
+
+The **challenge** is to complete the 'Category' Page according to the design mocks.
+
+This task **should take no longer than a coupe of hours** to complete & is here to assess your ability to write Javascript, HTML and CSS in a real world scenario.
 
 ## Getting Started
-The project has been completely setup for you, including the routes, and API calls. The code you need to write yourself is minimal, and marked clearly with // TODO comments.
+The project has been completely setup for you, including the page routes, and API calls. Therefore, the code you need to write is minimal, and it is marked clearly with // TODO comments.
 
 This is a [Next.js](https://nextjs.org/) app with [styled-components](https://styled-components.com/).
 
-You’ll need Node.js version `10.13` or later.
+You will need Node.js version `10.13` or later.
 
 - Navigate to the `front-end-take-home` directory in your terminal
 - Install the dependencies `npm install`
@@ -39,16 +40,16 @@ Complete the `Category` Page (To get to it, click on one of the categories card 
 ## Tips
 - Review the mocks in `design-mocks` directory. There is a mock design for desktop, laptop, tablet and mobile.
 - The logical order to complete the tasks are:
-  - Build the Show Card component
-  - Render those cards on the Category.
-  - Make it responsive
-  - Add alphabetical sorting. (If you still have some spare time)
+  - Build the Show Card component.
+  - Render the Show cards on the Category Page.
+  - Make it responsive.
+  - Add alphabetical sorting (If you still have some spare time).
 - You do not need to build everything from the scratch. You can reuse the components already built in this app if you want.
 
 ## How to submit
 
-- Push the results to some remote source control (like Git)
-- Email the bundle file to your point of contact.
+- Push the results to some remote source control (like Git).
+- Email the repository link to your point of contact.
 
 Good luck,
 
