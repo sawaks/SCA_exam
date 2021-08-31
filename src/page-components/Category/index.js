@@ -60,7 +60,7 @@ function Category({ categoryData }) {
             <meta name="title" content={`${category.name} Podcasts | ${LISTNR_META.brandName}`} />
             <meta name="description" content={`Listnr - ${category.name} Podcasts.`} />
           </Head>
-          <CategoriesContainer shows={shows} name={name} description={description} setOrder={setOrder} />
+          <CategoriesContainer shows={shows} name={name} description={description} onClick={setOrder} />
         </div>
         <Footer />
       </StyledContainer>

@@ -1,49 +1,37 @@
 import Button from 'shared-components/Button';
 import DropdownButton from 'shared-components/DropdownButton';
 import FilterIcon from 'shared-components/Icons/filter-list.svg';
-import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
+import { arrayOf, shape, string, func, oneOf } from 'prop-types';
 
-const options = [
-  {
-    name: 'Sort A-Z',
-    key: 'asc',
-  },
-  {
-    name: 'Sort Z-A',
-    key: 'desc',
-  },
-];
 const DropDownIcon = styled(FilterIcon)`
     width: 24px;
 `;
 
 const StyledButton = styled.div`
-width: inherit;
-   button {
-    border :none;
-    border-radius: 0px;
-    background: transparent;
-   }
+  width: inherit;
+  
+  button {
+      border :none;
+      border-radius: 0;
+      background: transparent;
+  }
 `;
 
-function FilterButton({ setOrder }) {
+function FilterButton({ onOptionClick, side, options }) {
+  const offsetX = side === 'left' ? '16px' : '-130px';
   return (
     <DropdownButton
       variant="secondary"
-      text=""
-      mobileText=""
       icon={<DropDownIcon />}
       id="category-filter-button"
       minWidthDesktop="40px"
       minWidthMobile="40px"
-      offsetX="16px"
+      offsetX={offsetX}
       offsetY="-86px"
       boxWidth="150px"
-      mobileOffsetY="-86px"
-      mobileOffsetX="16px"
-      mobileBoxWidth="130px"
+      width="40px"
       setIconRight
     >
       {options.map(item => (
@@ -51,10 +39,10 @@ function FilterButton({ setOrder }) {
           <Button
             as="button"
             variant="secondary"
-            text={item.name}
+            text={item.value}
             minWidthDesktop="0"
             key={item.key}
-            onClick={() => setOrder(item.key)}
+            onClick={() => onOptionClick(item.key)}
           />
         </StyledButton>
       ))}
@@ -63,7 +51,18 @@ function FilterButton({ setOrder }) {
 }
 
 FilterButton.propTypes = {
-  setOrder: PropTypes.func.isRequired,
+  onOptionClick: func.isRequired,
+  side: oneOf(['left', 'right']),
+  options: arrayOf(
+    shape({
+      key: string,
+      value: string,
+    }),
+  ).isRequired,
+};
+
+FilterButton.defaultProps = {
+  side: 'left',
 };
 
 export default FilterButton;

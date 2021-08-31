@@ -11,8 +11,7 @@ import React from 'react';
 import styled from 'styled-components';
 import screen from 'src/styling/screen';
 import spacing from 'src/styling/spacing';
-
-import FilterButton from '../FilterButton';
+import FilterButton from 'shared-components/FilterButton';
 
 const StyledCategoryGrid = styled(Box)`
    background-color: ${props => props.theme.dark};
@@ -22,7 +21,6 @@ const StyledCategoryGrid = styled(Box)`
    ${screen.tablet} {
     padding: 15px;
   }
-
 `;
 
 const StyledBox = styled(Box)`
@@ -44,7 +42,18 @@ const TextWrapper = styled.div`
   }
 `;
 
-function CategoriesGrid({ shows, description, setOrder }) {
+const options = [
+  {
+    value: 'Sort A-Z',
+    key: 'asc',
+  },
+  {
+    value: 'Sort Z-A',
+    key: 'desc',
+  },
+];
+
+function CategoriesGrid({ shows, description, onClick }) {
   return (
     <StyledCategoryGrid>
       <Flex justifyContent="space-between" alignItems="center" flexWrap="wrap">
@@ -59,7 +68,7 @@ function CategoriesGrid({ shows, description, setOrder }) {
       <Box mt={spacing.l} mb={spacing.m}>
         <Flex justifyContent="space-between" alignItems="center" flexWrap="wrap">
           <Header as="h2" text={`${shows.length} Podcasts`} variant="l" />
-          <FilterButton setOrder={setOrder} />
+          <FilterButton onOptionClick={onClick} options={options} />
         </Flex>
       </Box>
       <Row flexWrap="wrap" mt={spacing.l}>
@@ -96,13 +105,13 @@ CategoriesGrid.propTypes = {
     }),
   })),
   description: PropTypes.string,
-  setOrder: PropTypes.func,
+  onClick: PropTypes.func,
 };
 
 CategoriesGrid.defaultProps = {
   shows: [],
   description: null,
-  setOrder: null,
+  onClick: null,
 };
 
 export default CategoriesGrid;

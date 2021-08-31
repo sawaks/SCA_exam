@@ -9,6 +9,7 @@ const DropdownWrapper = styled.span`
   cursor: pointer;
   position: relative;
   display: inline-block;
+  width: ${props => props.width};
 `;
 
 const Dropdown = styled.span`
@@ -18,10 +19,9 @@ const Dropdown = styled.span`
   border: ${props => (props.withBorder ? '1px solid rgba(255, 255, 255, 0.2)' : 'none')};
   background-color: ${props => (props.theme.background)};
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
-  width: ${props => (props.mobileBoxWidth ? `${props.mobileBoxWidth}` : '130px')};
-  height: ${props => (props.mobileBoxHeight ? `${props.mobileBoxHeight}` : 'initial')};
-  bottom: ${props => (props.mobileOffsetY ? `${props.mobileOffsetY}` : '0px')};
-  right: ${props => (props.mobileOffsetX ? `${props.mobileOffsetX}` : '30px')};
+  width: 130px;
+  bottom: 0;
+  right: 30px;
   visibility: ${props => (props.isVisible ? 'visible' : 'hidden')};
 
   ${screen.tablet} {
@@ -68,9 +68,9 @@ class DropdownButton extends Component {
   };
 
   render() {
-    const { disable, id: dropdownId, ...rest } = this.props;
+    const { disable, id: dropdownId, width, ...rest } = this.props;
     return (
-      <DropdownWrapper ref={this.wrapperRef} onClick={e => this.toggleDropdown(e, dropdownId)} disable={disable}>
+      <DropdownWrapper ref={this.wrapperRef} onClick={e => this.toggleDropdown(e, dropdownId)} disable={disable} width={width}>
         <Button {...this.props} />
         <Dropdown isVisible={this.state[dropdownId]} {...rest}>
           {this.props.children}
@@ -81,21 +81,17 @@ class DropdownButton extends Component {
 }
 
 DropdownButton.propTypes = {
-  id: PropTypes.string.isRequired,
-  children: PropTypes.node,
-  offsetY: PropTypes.string,
-  offsetX: PropTypes.string,
-  boxWidth: PropTypes.string,
   boxHeight: PropTypes.string,
-  mobileBoxWidth: PropTypes.string,
-  mobileBoxHeight: PropTypes.string,
-  mobileOffsetX: PropTypes.string,
-  mobileOffsetY: PropTypes.string,
+  boxWidth: PropTypes.string,
+  children: PropTypes.node,
+  disable: PropTypes.bool,
+  id: PropTypes.string.isRequired,
   minWidthDesktop: PropTypes.string,
   minWidthMobile: PropTypes.string,
-  maxWidthDesktop: PropTypes.string,
+  offsetX: PropTypes.string,
+  offsetY: PropTypes.string,
   withBorder: PropTypes.bool,
-  disable: PropTypes.bool,
+  width: PropTypes.string,
   icon: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.object,
@@ -105,21 +101,17 @@ DropdownButton.propTypes = {
 };
 
 DropdownButton.defaultProps = {
-  offsetY: null,
-  offsetX: null,
   boxHeight: null,
   boxWidth: null,
-  mobileBoxWidth: null,
-  mobileBoxHeight: null,
-  mobileOffsetX: null,
-  mobileOffsetY: null,
-  minWidthDesktop: null,
-  minWidthMobile: null,
-  maxWidthDesktop: null,
-  withBorder: false,
+  children: null,
   disable: false,
   icon: null,
-  children: null,
+  minWidthDesktop: null,
+  minWidthMobile: null,
+  offsetX: null,
+  offsetY: null,
+  withBorder: false,
+  width: 0,
 };
 
 export default DropdownButton;
