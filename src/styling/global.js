@@ -32,6 +32,7 @@ export default createGlobalStyle`
     font-family: ${theme.bodyFontFamily};
     font-weight: normal;
     color: ${theme.light};
+    color: ${theme.light};
     overflow-x: hidden;
   }
 
@@ -42,14 +43,5 @@ export default createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
-  }
-
-  .headroom {
-    background-color: transparent;
-    transition: background-color 0.2s ease-out;
-  }
-
-  .headroom--pinned {
-    background-color: ${props => props.theme.dark};
   }
 `;
