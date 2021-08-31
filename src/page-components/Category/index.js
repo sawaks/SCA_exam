@@ -37,13 +37,12 @@ function Category({ categoryData }) {
     shows,
   } = category || {};
 
-  const getData = async () => {
-    if (!isEmpty(category)) {
-      setCategory(get(await getCategories([slug], order), 'categories[0]', null));
-    }
-  };
-
   useEffect(() => {
+    const getData = async () => {
+      if (!isEmpty(category)) {
+        setCategory(get(await getCategories([slug], order), 'categories[0]', null));
+      }
+    };
     getData();
   }, [order]);
 
@@ -64,16 +63,7 @@ function Category({ categoryData }) {
             {/* eslint-disable no-nested-ternary */}
             <meta
               name="description"
-              content={
-                category.shows?.length >= 3
-                  ? (`Listnr - ${category.name} Podcasts - incl.
-                            ${shows.slice(0, 1).map(show => show.name)}, ${shows.slice(1, 2).map(show => show.name)}
-                            and ${shows.slice(2, 3).map(podcast => podcast.name)}.`)
-                  : shows?.length === 2
-                    ? (`Listnr - ${name} Podcasts - incl.
-                              ${shows.slice(0, 1).map(show => show.name)} and ${shows.slice(1, 2).map(show => show.name)}.`)
-                    : (`Listnr - ${name} Podcasts - incl. ${shows?.map(show => show.name)}.`)
-              }
+              content={`Listnr - ${category.name} Podcasts.`}
             />
           </Head>
           <CategoriesContainer id={id} slug={slug} shows={shows} name={name} description={description} setOrder={setOrder} />

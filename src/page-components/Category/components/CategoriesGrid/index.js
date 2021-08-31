@@ -44,7 +44,7 @@ const TextWrapper = styled.div`
   }
 `;
 
-function CategoriesGrid({ shows, name, description, setOrder }) {
+function CategoriesGrid({ shows, description, setOrder }) {
   return (
     <StyledCategoryGrid>
       <Flex justifyContent="space-between" alignItems="center" flexWrap="wrap">
@@ -63,7 +63,7 @@ function CategoriesGrid({ shows, name, description, setOrder }) {
         </Flex>
       </Box>
       <Row flexWrap="wrap" mt={spacing.l}>
-        {shows.map((show, i) => (
+        {shows.map(show => (
           <Box width={[1 / 2, 1 / 3, 1 / 4, 1 / 5]} mb={spacing.l} key={show.slug}>
             <Link
               href={`${routes.podcasts}/${show.slug}`}
@@ -95,14 +95,12 @@ CategoriesGrid.propTypes = {
       }),
     }),
   })),
-  name: PropTypes.string,
   description: PropTypes.string,
   setOrder: PropTypes.func,
 };
 
 CategoriesGrid.defaultProps = {
   shows: [],
-  name: '',
   description: null,
   setOrder: null,
 };
