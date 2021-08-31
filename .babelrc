@@ -23,14 +23,15 @@
       {
         "root": ["./src", "./"],
         "alias": {
-          "shared-components": "./src/shared-components",
+          "common": "./src/common",
+          "integration": "./src/integration",
+          "layout": "./src/layout",
           "page-components": "./src/page-components",
+          "server": "./server",
+          "shared-components": "./src/shared-components",
           "store": "./src/store",
           "styling": "./src/styling",
-          "utilities": "./src/utilities",
-          "layout": "./src/layout",
-          "server": "./server",
-          "common": "./src/common"
+          "utilities": "./src/utilities"
         }
       }
     ],

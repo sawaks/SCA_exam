@@ -7,8 +7,7 @@ export async function getPage(slug) {
   try {
     return await fetchAPI(GET_PAGE, { slug });
   } catch (error) {
-    console.log('ERROR => getPage');
-    console.log(error);
-    return error;
+    console.log('ERROR => getPage', error);
+    throw error;
   }
 }

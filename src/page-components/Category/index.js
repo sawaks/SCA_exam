@@ -11,7 +11,7 @@ import styled from 'styled-components';
 import useRouterServer from 'utilities/helpers/useRouterServer';
 import { Container } from 'shared-components/Grid';
 import { LISTNR_META } from 'utilities/constants';
-import { getCategories } from 'utilities/api/graphql/categories/queryMethods';
+import { getCategories } from 'integration/graphql/categories/queryMethods';
 import CategoriesContainer from './components/CategoryContainer';
 
 const StyledContainer = styled(Container)`
