@@ -27,7 +27,6 @@ function Category({ categoryData }) {
   const [category, setCategory] = useState(categoryData);
 
   const {
-    id,
     slug,
     name,
     colour: backgroundColor,
@@ -59,13 +58,9 @@ function Category({ categoryData }) {
           <Head>
             <title>{`${category.name} Podcasts | ${LISTNR_META.brandName}`}</title>
             <meta name="title" content={`${category.name} Podcasts | ${LISTNR_META.brandName}`} />
-            {/* eslint-disable no-nested-ternary */}
-            <meta
-              name="description"
-              content={`Listnr - ${category.name} Podcasts.`}
-            />
+            <meta name="description" content={`Listnr - ${category.name} Podcasts.`} />
           </Head>
-          <CategoriesContainer id={id} slug={slug} shows={shows} name={name} description={description} setOrder={setOrder} />
+          <CategoriesContainer shows={shows} name={name} description={description} setOrder={setOrder} />
         </div>
         <Footer />
       </StyledContainer>

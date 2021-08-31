@@ -52,7 +52,6 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#020024" />
         </Head>
         <body>
-          {/* Adswizz scripts placed here as recommended in the developer's guide */}
           <Main />
           <NextScript />
         </body>

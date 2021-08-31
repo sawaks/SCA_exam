@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
-    <defs>
-        <path id="info_icon" d="M181.1 3334.5h1.8v-5.4h-1.8v5.4zm.9-13.5c-4.972 0-9 4.028-9 9s4.028 9 9 9 9-4.028 9-9-4.028-9-9-9zm0 16.2c-3.969 0-7.2-3.231-7.2-7.2 0-3.969 3.231-7.2 7.2-7.2 3.969 0 7.2 3.231 7.2 7.2 0 3.969-3.231 7.2-7.2 7.2zm-.9-9.9h1.8v-1.8h-1.8v1.8z"/>
-    </defs>
-    <g fill="none" fill-rule="evenodd" transform="translate(-173 -3321)">
-        <use fill="#FFF" fill-rule="nonzero" opacity=".697" xlink:href="#info_icon"/>
-    </g>
-</svg>

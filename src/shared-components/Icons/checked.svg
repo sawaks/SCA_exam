@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="17" viewBox="0 0 22 17">
-    <defs>
-        <path id="checked" d="M7.333 13.564L2.237 8.5.5 10.212 7.333 17 22 2.429 20.277.716z"/>
-    </defs>
-    <use fill="#FFF" fill-rule="nonzero" opacity=".7" xlink:href="#checked"/>
-</svg>

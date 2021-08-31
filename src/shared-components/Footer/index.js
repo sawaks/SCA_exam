@@ -4,10 +4,10 @@ import Section from 'shared-components/Layout/Section';
 import screen from 'src/styling/screen';
 import styled from 'styled-components';
 import { Flex } from 'shared-components/Grid';
-import YouTube from './assets/you-tube.svg';
-import Twitter from './assets/Twitter.svg';
-import Instagram from './assets/Instagram.svg';
-import Facebook from './assets/Facebook.svg';
+import YouTube from 'shared-components/Icons/you-tube.svg';
+import Twitter from 'shared-components/Icons/Twitter.svg';
+import Instagram from 'shared-components/Icons/Instagram.svg';
+import Facebook from 'shared-components/Icons/Facebook.svg';
 
 const StyledSection = styled(Section)`
   padding-top: 12px;

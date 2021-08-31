@@ -19,11 +19,11 @@ export const parameters = {
 
 addParameters({
     backgrounds: {
-        default: 'Navy',
+        default: 'Dark',
         values: [
             {
-                name: 'Navy',
-                value: '#021924'
+                name: 'Dark',
+                value: '#201f20'
             },
             {
                 name: 'Gray',

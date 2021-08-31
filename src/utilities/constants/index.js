@@ -4,6 +4,7 @@ export const OS_TYPE = {
   ANDROID: 'Android',
   WINDOWS: 'Windows',
   LINUX: 'Linux',
+  HUAWEI: 'Huawei',
 };
 
 export const LISTNR_META = {

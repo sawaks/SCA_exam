@@ -11,19 +11,17 @@ const StyledCategoryContainer = styled(Flex)`
   position: relative;
 `;
 
-const CategoryContainer = ({ id, slug, shows, name, description, setOrder }) => (
+const CategoryContainer = ({ shows, name, description, setOrder }) => (
   <StyledCategoryContainer flexDirection="column">
     <Box px={[spacing.m, 0, 0]}>
       <Header as="h1" variant="xl" text={name} linesToShow={1} mb="m" />
     </Box>
-    <CategoriesGrid id={id} slug={slug} shows={shows} name={name} description={description} setOrder={setOrder} />
+    <CategoriesGrid shows={shows} description={description} setOrder={setOrder} />
   </StyledCategoryContainer>
 );
 
 CategoryContainer.propTypes = {
-  id: PropTypes.string.isRequired,
   name: PropTypes.string,
-  slug: PropTypes.string,
   description: PropTypes.string,
   shows: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
@@ -39,7 +37,6 @@ CategoryContainer.propTypes = {
 
 CategoryContainer.defaultProps = {
   name: null,
-  slug: null,
   description: null,
   setOrder: null,
   shows: [],

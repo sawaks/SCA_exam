@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 import screen from 'src/styling/screen';
-import Icon from './assets/search-icon.svg';
+import Icon from 'shared-components/Icons/search-icon.svg';
 
 const SearchWrapper = styled.div`
   width: 100%;
