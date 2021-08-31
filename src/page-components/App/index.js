@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { ThemeProvider } from 'styled-components';
-import { Provider } from 'react-redux';
+import React from 'react';
+import {ThemeProvider} from 'styled-components';
+import {Provider} from 'react-redux';
 import Head from 'next/head';
-import { any, func, objectOf } from 'prop-types';
+import {any, func, objectOf} from 'prop-types';
 import makeStore from 'store';
 import BackgroundGradient from 'shared-components/Layout/BackgroundGradient';
 import theme from 'src/styling/theme';
@@ -11,11 +11,7 @@ import Global from './Global';
 const store = makeStore();
 
 const App = ({ Component, pageProps }) => {
-  useEffect(() => {
-    if (window.Cypress) {
-      window.store = store;
-    }
-  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Provider store={store}>

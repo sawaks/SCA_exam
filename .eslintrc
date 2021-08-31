@@ -5,15 +5,13 @@
   ],
   "plugins": [
     "react",
-    "cypress",
     "simple-import-sort"
   ],
   "env": {
     "jest": true,
     "node": true,
     "browser": true,
-    "es6": true,
-    "cypress/globals": true
+    "es6": true
   },
   "settings": {
     "import/resolver": {
