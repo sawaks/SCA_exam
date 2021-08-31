@@ -11,7 +11,7 @@ import React from 'react';
 import styled from 'styled-components';
 import screen from 'src/styling/screen';
 import spacing from 'src/styling/spacing';
-import FilterButton from 'shared-components/FilterButton';
+import SortButton from 'shared-components/SortButton';
 
 const StyledCategoryGrid = styled(Box)`
    background-color: ${props => props.theme.dark};
@@ -68,7 +68,7 @@ function CategoriesGrid({ shows, description, onClick }) {
       <Box mt={spacing.l} mb={spacing.m}>
         <Flex justifyContent="space-between" alignItems="center" flexWrap="wrap">
           <Header as="h2" text={`${shows.length} Podcasts`} variant="l" />
-          <FilterButton onOptionClick={onClick} options={options} />
+          <SortButton onOptionClick={onClick} options={options} />
         </Flex>
       </Box>
       <Row flexWrap="wrap" mt={spacing.l}>

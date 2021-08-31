@@ -19,7 +19,7 @@ const StyledButton = styled.div`
   }
 `;
 
-function FilterButton({ onOptionClick, side, options }) {
+function SortButton({ onOptionClick, side, options }) {
   const offsetX = side === 'left' ? '16px' : '-130px';
   return (
     <DropdownButton
@@ -50,7 +50,7 @@ function FilterButton({ onOptionClick, side, options }) {
   );
 }
 
-FilterButton.propTypes = {
+SortButton.propTypes = {
   onOptionClick: func.isRequired,
   side: oneOf(['left', 'right']),
   options: arrayOf(
@@ -61,8 +61,8 @@ FilterButton.propTypes = {
   ).isRequired,
 };
 
-FilterButton.defaultProps = {
+SortButton.defaultProps = {
   side: 'left',
 };
 
-export default FilterButton;
+export default SortButton;

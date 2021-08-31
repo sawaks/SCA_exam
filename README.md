@@ -18,7 +18,7 @@ You should only spend **2 hours** maximum on this test. So please don't feel lik
 
 This is a [Next.js](https://nextjs.org/) app with [styled-components](https://styled-components.com/).
 
-You’ll need Node.js version `10.13` or later, a text editor and terminal app for this task.
+You’ll need Node.js version `10.13` or later.
 
 - Navigate to the `front-end-take-home` directory in your terminal
 - Install the dependencies `npm install`

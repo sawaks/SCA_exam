@@ -1,15 +1,15 @@
 import React from 'react';
-import FilterButton from './index';
+import SortButton from './index';
 
 export default {
-  title: 'FilterButton',
+  title: 'SortButton',
 };
 
-export const Filter = args => (
-  <FilterButton {...args} />
+export const Default = args => (
+  <SortButton {...args} />
 );
 
-Filter.args = {
+Default.args = {
   side: 'right',
   onOptionClick: () => undefined,
   options: [
