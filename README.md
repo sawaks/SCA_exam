@@ -9,7 +9,7 @@ The **challenge** is to complete the 'Category' Page according to the design moc
 This task **should take no longer than a coupe of hours** to complete & is here to assess your ability to write Javascript, HTML and CSS in a real world scenario.
 
 ## Getting Started
-The project has been completely setup for you, including the page routes, and API calls. Therefore, the code you need to write is minimal, and it is marked clearly with // TODO comments.
+The project has been completely setup for you, including the page routes, and API calls. Therefore, the code you need to write is minimal.
 
 This is a [Next.js](https://nextjs.org/) app with [styled-components](https://styled-components.com/).
 
@@ -25,7 +25,7 @@ You can also open storybook `npm run storybook` to check out some of the compone
 
 ## Requirements
 
-Complete the `Category` Page (To get to it, click on one of the categories card on the Home Page).
+Complete the `Category` Page (To get there, click on one of the categories on the Home Page).
 
 - The layout should be responsive and match the mocks (4 columns on desktop, 3 on tablet, 2 on mobile).
 - The page should visually match the mocks as closely as possible.
@@ -34,7 +34,7 @@ Complete the `Category` Page (To get to it, click on one of the categories card 
 - The page only needs to work on the *latest Chrome version*.
 - Commit early and often, so that we can see how problems are solved.
 
-####Bonus round!
+#### Bonus round!
 - Add alphabetical sorting to the listings according to `design-mocks/mock-sort.png`. (Only if you still have time)
 
 ## Tips

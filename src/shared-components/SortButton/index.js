@@ -1,23 +1,8 @@
 import Button from 'shared-components/Button';
 import DropdownButton from 'shared-components/DropdownButton';
-import FilterIcon from 'shared-components/Icons/filter-list.svg';
 import React from 'react';
-import styled from 'styled-components';
 import { arrayOf, shape, string, func, oneOf } from 'prop-types';
-
-const DropDownIcon = styled(FilterIcon)`
-    width: 24px;
-`;
-
-const StyledButton = styled.div`
-  width: inherit;
-  
-  button {
-      border :none;
-      border-radius: 0;
-      background: transparent;
-  }
-`;
+import { DropDownIcon, StyledButton } from './styled';
 
 function SortButton({ onOptionClick, side, options }) {
   const offsetX = side === 'left' ? '16px' : '-130px';

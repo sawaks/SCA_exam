@@ -1,8 +1,9 @@
 import React from 'react';
+import { Box } from '@rebass/grid';
 import Paragraph from './index';
 
 export default {
-  title: 'Example/Paragraph',
+  title: 'Typography/Paragraph',
   component: Paragraph,
 };
 
@@ -40,4 +41,16 @@ export const Transparent = Template.bind({});
 Transparent.args = {
   transparent: true,
   text: 'Paragraph 70%',
+};
+
+export const MultiLineEllipsis = args => (
+  <Box width={275}>
+    <Paragraph {...args} />
+  </Box>
+);
+MultiLineEllipsis.args = {
+  variant: 'l',
+  transparent: true,
+  text: 'Text gets truncated if doesn\'t fit in the line',
+  linesToShow: 1,
 };

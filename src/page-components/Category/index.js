@@ -2,7 +2,7 @@ import Footer from 'shared-components/Footer';
 import Head from 'next/head';
 import Page from 'shared-components/Layout/Page';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import get from 'lodash/get';
 import isEmpty from 'lodash/isEmpty';
 import routes from 'routes';
@@ -11,7 +11,7 @@ import styled from 'styled-components';
 import { Container } from 'shared-components/Grid';
 import { LISTNR_META } from 'utilities/constants';
 import { getCategories } from 'integration/graphql/categories/query-methods';
-import CategoriesContainer from './components/CategoryContainer';
+import CategoriesContainer from './components/CategorySection';
 import useRouterServer from '../../hooks/useRouterServer';
 
 const StyledContainer = styled(Container)`
@@ -23,30 +23,17 @@ const StyledContainer = styled(Container)`
 `;
 
 function Category({ categoryData }) {
-  const [order, setOrder] = useState('');
-  const [category, setCategory] = useState(categoryData);
-
   const {
-    slug,
     name,
     colour: backgroundColor,
     description,
     images,
     shows,
-  } = category || {};
-
-  useEffect(() => {
-    const getData = async () => {
-      if (!isEmpty(category)) {
-        setCategory(get(await getCategories([slug], order), 'categories[0]', null));
-      }
-    };
-    getData();
-  }, [order]);
+  } = categoryData || {};
 
   const backgroundImage = images?.squareLarge?.url;
 
-  if (isEmpty(category) || !category) {
+  if (isEmpty(categoryData)) {
     useRouterServer(routes.error404);
     return null;
   }
@@ -56,11 +43,11 @@ function Category({ categoryData }) {
       <StyledContainer>
         <div>
           <Head>
-            <title>{`${category.name} Podcasts | ${LISTNR_META.brandName}`}</title>
-            <meta name="title" content={`${category.name} Podcasts | ${LISTNR_META.brandName}`} />
-            <meta name="description" content={`Listnr - ${category.name} Podcasts.`} />
+            <title>{`${name} Podcasts | ${LISTNR_META.brandName}`}</title>
+            <meta name="title" content={`${name} Podcasts | ${LISTNR_META.brandName}`} />
+            <meta name="description" content={`Listnr - ${name} Podcasts.`} />
           </Head>
-          <CategoriesContainer shows={shows} name={name} description={description} onClick={setOrder} />
+          <CategoriesContainer shows={shows} name={name} description={description} />
         </div>
         <Footer />
       </StyledContainer>

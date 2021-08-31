@@ -1,8 +1,9 @@
 import React from 'react';
+import { Box } from '@rebass/grid';
 import Header from './index';
 
 export default {
-  title: 'Example/Header',
+  title: 'Typography/Header',
   component: Header,
 };
 
@@ -41,4 +42,16 @@ export const Transparent = Template.bind({});
 Transparent.args = {
   transparent: true,
   text: 'Header 70%',
+};
+
+export const MultiLineEllipsis = args => (
+  <Box width={275}>
+    <Header {...args} />
+  </Box>
+);
+MultiLineEllipsis.args = {
+  variant: 'm',
+  transparent: true,
+  text: 'Text gets truncated if doesn\'t fit in the line',
+  linesToShow: 1,
 };

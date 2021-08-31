@@ -5,41 +5,39 @@ import React from 'react';
 import styled from 'styled-components';
 import spacing from 'src/styling/spacing';
 
-import CategoriesGrid from '../CategoriesGrid';
+import CategoryShows from '../CategoryShows';
 
 const StyledCategoryContainer = styled(Flex)`
   position: relative;
 `;
 
-const CategoryContainer = ({ shows, name, description, onClick }) => (
+const CategorySection = ({ shows, name, description }) => (
   <StyledCategoryContainer flexDirection="column">
     <Box px={[spacing.m, 0, 0]}>
       <Header as="h1" variant="xl" text={name} linesToShow={1} mb="m" />
     </Box>
-    <CategoriesGrid shows={shows} description={description} onClick={onClick} />
+    <CategoryShows shows={shows} description={description} />
   </StyledCategoryContainer>
 );
 
-CategoryContainer.propTypes = {
+CategorySection.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   shows: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string,
-    slug: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
     images: PropTypes.shape({
-      squareLarge: PropTypes.shape({ url: PropTypes.string }),
+      squareLarge: PropTypes.shape({
+        url: PropTypes.string,
+      }),
     }),
   })),
-  onClick: PropTypes.func,
 };
 
-CategoryContainer.defaultProps = {
+CategorySection.defaultProps = {
   name: null,
   description: null,
-  onClick: null,
   shows: [],
 };
 
-export default CategoryContainer;
+export default CategorySection;

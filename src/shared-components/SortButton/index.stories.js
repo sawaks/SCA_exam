@@ -2,13 +2,13 @@ import React from 'react';
 import SortButton from './index';
 
 export default {
-  title: 'SortButton',
+  title: 'Button/SortButton',
+  component: SortButton,
 };
 
-export const Default = args => (
-  <SortButton {...args} />
-);
+const Template = args => <SortButton {...args} />;
 
+export const Default = Template.bind({});
 Default.args = {
   side: 'right',
   onOptionClick: () => undefined,
@@ -23,3 +23,4 @@ Default.args = {
     },
   ],
 };
+
