@@ -9,7 +9,7 @@ import Page from 'shared-components/Layout/Page';
 import screen from 'src/styling/screen';
 import Header from 'shared-components/Typography/Header';
 import Paragraph from 'shared-components/Typography/Paragraph';
-import ErrorIcon from 'shared-components/Icons/no-podcast-copy.svg';
+import ErrorIcon from 'shared-components/Icons/NoPodcast';
 import Section from 'shared-components/Layout/Section';
 
 const Styled404 = styled.h1`

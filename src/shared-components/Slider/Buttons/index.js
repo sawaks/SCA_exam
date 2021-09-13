@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Flex } from '@rebass/grid';
-import ArrowDown from 'shared-components/Icons/arrow-down.svg';
+import ArrowDown from 'shared-components/Icons/ArrowDown';
 import screen from 'src/styling/screen';
 
 const Edge = styled(Flex)`

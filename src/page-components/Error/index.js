@@ -10,7 +10,7 @@ import Section from 'shared-components/Layout/Section';
 import screen from 'src/styling/screen';
 import Header from 'shared-components/Typography/Header';
 import Paragraph from 'shared-components/Typography/Paragraph';
-import ErrorIcon from 'shared-components/Icons/no-podcast-copy.svg';
+import ErrorIcon from 'shared-components/Icons/NoPodcast';
 
 const StyledErrorCode = styled.h1`
   font-size: 60px;

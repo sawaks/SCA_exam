@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import routes from 'routes';
-import Logo from 'shared-components/Icons/listnr-logo.svg';
+import Logo from 'shared-components/Icons/ListnrLogo';
 import { Desktop, Mobile } from 'shared-components/Screen';
 import spacing from 'src/styling/spacing';
 import screen from 'src/styling/screen';

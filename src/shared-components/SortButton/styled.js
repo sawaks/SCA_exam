@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import FilterIcon from 'shared-components/Icons/filter-list.svg';
+import FilterIcon from 'shared-components/Icons/FilterList';
 
 export const DropDownIcon = styled(FilterIcon)`
     width: 24px;

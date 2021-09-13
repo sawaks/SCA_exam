@@ -1,6 +1,6 @@
 import { Box } from '@rebass/grid';
-import AppStoreIcon from 'shared-components/Icons/app-store.svg';
-import GooglePlayIcon from 'shared-components/Icons/google-play.svg';
+import AppStoreIcon from 'shared-components/Icons/AppStore';
+import GooglePlayIcon from 'shared-components/Icons/GooglePlay';
 import React, { useEffect, useState } from 'react';
 import spacing from 'src/styling/spacing';
 import { OS_TYPE } from 'utilities/constants';

@@ -4,10 +4,9 @@ import Section from 'shared-components/Layout/Section';
 import screen from 'src/styling/screen';
 import styled from 'styled-components';
 import { Flex } from 'shared-components/Grid';
-import YouTube from 'shared-components/Icons/you-tube.svg';
-import Twitter from 'shared-components/Icons/Twitter.svg';
-import Instagram from 'shared-components/Icons/Instagram.svg';
-import Facebook from 'shared-components/Icons/Facebook.svg';
+import Twitter from 'shared-components/Icons/Twitter';
+import Instagram from 'shared-components/Icons/Instagram';
+import Facebook from 'shared-components/Icons/Facebook';
 
 const StyledSection = styled(Section)`
   padding-top: 12px;
@@ -120,16 +119,6 @@ function Footer() {
             variant="tertiary"
             link={{ href: 'https://twitter.com/listnrau', passHref: true }}
             icon={<Twitter />}
-            target="_blank"
-            rel="noopener noreferrer"
-          />
-        </SocialIconWrapper>
-        <SocialIconWrapper>
-          <Button
-            as="a"
-            variant="tertiary"
-            link={{ href: 'https://www.youtube.com/channel/UCzy5XU9J0gCop46j-dCWggQ', passHref: true }}
-            icon={<YouTube />}
             target="_blank"
             rel="noopener noreferrer"
           />

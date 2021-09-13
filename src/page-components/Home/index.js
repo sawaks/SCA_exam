@@ -20,7 +20,7 @@ const Home = ({ promotedCategories, downloadAppBanner }) => (
       <meta name="description" content="Browse the best LiSTNR has to offer including Previews and Top Episodes" />
     </Head>
     <Container>
-      <Header as="h1" text="Podcast Categories" variant="xl" mb={spacing.l} />
+      <Header as="h1" text="Podcast Categories" variant="xl" mb="l" />
       <Box height="75vh">
         { promotedCategories && (promotedCategories.map(category => (
           <Box key={category.slug} mb={spacing.l}>
