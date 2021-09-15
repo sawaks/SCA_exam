@@ -35,7 +35,7 @@ Complete the `Category` Page (To get there, click on one of the categories on th
 - Commit early and often, so that we can see how problems are solved.
 
 #### Bonus round!
-- Add alphabetical sorting to the listings according to `design-mocks/mock-sort.png`. (Only if you still have time)
+- Add a button for ascending and descending sorting to the listings according to `design-mocks/mock-sort.png`. (If you still have time)
 
 ## Tips
 - Review the mocks in `design-mocks` directory. There is a mock design for desktop, laptop, tablet and mobile.
