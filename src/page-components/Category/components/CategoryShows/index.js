@@ -8,7 +8,7 @@ function CategoryShows({ shows, description }) {
   return (
     <StyledCategoryShows>
       <Flex justifyContent="space-between" alignItems="center" flexWrap="wrap">
-        <StyledBox width={[1, 0.65, 0.65]}>
+        <StyledBox>
           {description && (
           <TextWrapper>
             <Paragraph text={description} variant="l" transparent />
