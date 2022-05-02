@@ -38,6 +38,7 @@ module.exports = withBundleAnalyzer({
       'www.omnycontent.com',
       'cms-xl.podcastoneaustralia.com.au',
       'pcone-xl-img-dev.scalabs.com.au',
+      'listnr-img-prod.scalabs.com.au',
     ],
   },
 });

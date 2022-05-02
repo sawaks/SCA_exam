@@ -13,7 +13,7 @@ The project has been completely setup for you, including the page routes, and AP
 
 This is a [Next.js](https://nextjs.org/) app with [styled-components](https://styled-components.com/).
 
-You will need Node.js version `10.13` or later.
+You will need Node.js version `16`.
 
 - Navigate to the `front-end-take-home` directory in your terminal
 - Install the dependencies `npm install`
@@ -21,7 +21,7 @@ You will need Node.js version `10.13` or later.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser, and you should see the home page.
 
-You can also open storybook `npm run storybook` to check out some of the components already built.
+You can also open storybook `npm run storybook` to check out some components already built.
 
 ## Requirements
 
