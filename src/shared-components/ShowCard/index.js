@@ -41,11 +41,11 @@ ${screen.desktop} {
 function ShowCard(props) {
     return (
         <CardWrapper>
-            <ImageWrapper width={[1, 1, 0.8]}>
+            <ImageWrapper>
                 <Image src={props.imageUrl} alt={props.title} style={{ width: '100%', borderRadius: '8px' }} />
             </ImageWrapper>
-            <ContentWrapper width={[1, 1, 0.2]}>
-                <Header text={props.title} mt={spacing.s} />
+            <ContentWrapper>
+                <Header text={props.title} mt={spacing.s} linesToShow={1} />
                 <Paragraph text={props.description} linesToShow={3} mt={spacing.s} transparent />
             </ContentWrapper>
         </CardWrapper>
