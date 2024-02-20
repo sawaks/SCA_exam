@@ -3,31 +3,30 @@ import styled from "styled-components";
 import Image from "../Image";
 import Header from "../Typography/Header";
 import Paragraph from "../Typography/Paragraph";
-import { Box, Flex } from '@rebass/grid';
 import spacing from 'src/styling/spacing';
 import screen from 'src/styling/screen';
 
 const CardWrapper = styled.div`
-border-radius: 8px;
-padding: ${spacing.s};
+  border-radius: 8px;
+  padding: ${spacing.s};
 
 `;
 
 const ImageWrapper = styled.div`
-width: 100%;
+  width: 100%;
 
 `;
 
 const ContentWrapper = styled.div`
-width: 100%;
-padding-bottom: ${spacing.l};
+  width: 100%;
+  padding-bottom: ${spacing.l};
 `;
 
 const CardGrid = styled.div`
 display: grid;
 grid-template-columns: 1fr;
 
-${screen.mobile} {
+@media (min-width: 10em) {
  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
 
 }
