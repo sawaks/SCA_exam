@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { StyledBox, StyledCategoryShows, TextWrapper } from './styled';
 import { ShowCard, CardGrid } from 'src/shared-components/ShowCard';
+import ShowNum from 'src/shared-components/ShowNum';
 
 function CategoryShows({ shows, description }) {
   console.log(shows, 'shows data');
   return (
     <StyledCategoryShows>
+      {shows && <ShowNum productsNumber={shows.length} />}
       <Flex justifyContent="space-between" alignItems="center" flexWrap="wrap">
         <StyledBox>
           {description && (

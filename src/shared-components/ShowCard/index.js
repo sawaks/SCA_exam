@@ -29,6 +29,7 @@ grid-template-columns: 1fr;
 
 ${screen.mobile} {
  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+
 }
 
 ${screen.tablet} {
