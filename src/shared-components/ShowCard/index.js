@@ -1,0 +1,51 @@
+import PropTypes from 'prop-types';
+import styled from "styled-components";
+import Image from "../Image";
+import Header from "../Typography/Header";
+import Paragraph from "../Typography/Paragraph";
+import { Box, Flex } from '@rebass/grid';
+import spacing from 'src/styling/spacing';
+
+const CardWrapper = styled.div`
+border-radius: 8px;
+padding: ${spacing.s};
+
+`;
+
+const ImageWrapper = styled.div`
+width: 100%;
+
+`;
+
+const ContentWrapper = styled.div`
+width: 100%;
+padding-bottom: ${spacing.l};
+`;
+
+function ShowCard(props) {
+    return (
+        <CardWrapper>
+            <ImageWrapper width={[1, 1, 0.8]}>
+                <Image src={props.imageUrl} alt={props.title} style={{ width: '100%', borderRadius: '8px' }} />
+            </ImageWrapper>
+            <ContentWrapper width={[1, 1, 0.2]}>
+                <Header text={props.title} mt={spacing.s} />
+                <Paragraph text={props.description} linesToShow={3} mt={spacing.s} transparent />
+            </ContentWrapper>
+        </CardWrapper>
+
+    );
+}
+
+ShowCard.propTypes = {
+    /** show title */
+    title: PropTypes.string,
+    /** show image*/
+    imageUrl: PropTypes.string,
+    /** show description text */
+    description: PropTypes.string,
+};
+
+
+
+export default ShowCard;
