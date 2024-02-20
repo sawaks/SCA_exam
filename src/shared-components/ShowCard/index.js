@@ -9,12 +9,10 @@ import screen from 'src/styling/screen';
 const CardWrapper = styled.div`
   border-radius: 8px;
   padding: ${spacing.s};
-
 `;
 
 const ImageWrapper = styled.div`
   width: 100%;
-
 `;
 
 const ContentWrapper = styled.div`

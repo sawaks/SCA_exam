@@ -7,7 +7,6 @@ import { ShowCard, CardGrid } from 'src/shared-components/ShowCard';
 import ShowNum from 'src/shared-components/ShowNum';
 
 function CategoryShows({ shows, description }) {
-  console.log(shows, 'shows data');
   return (
     <StyledCategoryShows>
       {shows && <ShowNum productsNumber={shows.length} />}
