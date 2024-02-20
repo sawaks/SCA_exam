@@ -3,7 +3,7 @@ import Paragraph from 'shared-components/Typography/Paragraph';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { StyledBox, StyledCategoryShows, TextWrapper } from './styled';
-import ShowCard from 'src/shared-components/ShowCard';
+import { ShowCard, CardGrid } from 'src/shared-components/ShowCard';
 
 function CategoryShows({ shows, description }) {
   console.log(shows, 'shows data');
@@ -17,9 +17,11 @@ function CategoryShows({ shows, description }) {
             </TextWrapper>
           )}
         </StyledBox>
-        {shows && (shows.map(show => (
-          <ShowCard key={show.id} imageUrl={show?.images?.squareLarge?.url || ""} title={show.name} description={show.description} />
-        )))}
+        <CardGrid>
+          {shows && (shows.map(show => (
+            <ShowCard key={show.id} imageUrl={show?.images?.squareLarge?.url || ""} title={show.name} description={show.description} />
+          )))}
+        </CardGrid>
       </Flex>
     </StyledCategoryShows>
   );
