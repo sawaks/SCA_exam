@@ -1,17 +1,15 @@
 import Home from 'page-components/Home';
 import { getPromotedCategories } from 'integration/graphql/categories/query-methods';
-import { getPage } from 'integration/graphql/page/queryMethods';
 
 export const getServerSideProps = async () => {
-  const [promotedCategories, { page: { contentBlocks } }] = await Promise.all([
+  const [promotedCategories] = await Promise.all([
     getPromotedCategories(),
-    getPage('download-block'),
   ]);
 
   return {
     props: {
       promotedCategories: promotedCategories?.promotedCategories,
-      downloadAppBanner: contentBlocks[0]?.blockData,
+      downloadAppBanner: {},
     },
   };
 };
