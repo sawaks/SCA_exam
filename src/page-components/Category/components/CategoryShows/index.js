@@ -3,8 +3,9 @@ import Paragraph from 'shared-components/Typography/Paragraph';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { StyledBox, StyledCategoryShows, TextWrapper } from './styled';
-import { ShowCard, CardGrid } from 'src/shared-components/ShowCard';
+import ShowCard from 'src/shared-components/ShowCard';
 import ShowNum from 'src/shared-components/ShowNum';
+import { CardGrid } from './styled';
 
 function CategoryShows({ shows, description }) {
   return (

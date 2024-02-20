@@ -20,23 +20,23 @@ const ContentWrapper = styled.div`
   padding-bottom: ${spacing.l};
 `;
 
-const CardGrid = styled.div`
-display: grid;
-grid-template-columns: 1fr;
+// const CardGrid = styled.div`
+// display: grid;
+// grid-template-columns: 1fr;
 
-@media (min-width: 10em) {
- grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+// @media (min-width: 10em) {
+//  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
 
-}
+// }
 
-${screen.tablet} {
- grid-template-columns: repeat(3, 1fr); /* 3 columns on tablet */
-}
+// ${screen.tablet} {
+//  grid-template-columns: repeat(3, 1fr); /* 3 columns on tablet */
+// }
 
-${screen.desktop} {
- grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
-}
-`;
+// ${screen.desktop} {
+//  grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+// }
+// `;
 
 function ShowCard(props) {
     return (
@@ -64,4 +64,4 @@ ShowCard.propTypes = {
 
 
 
-export { ShowCard, CardGrid };
+export default ShowCard;
